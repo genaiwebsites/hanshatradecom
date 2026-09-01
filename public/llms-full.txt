@@ -1,0 +1,151 @@
+# Hansha Tradecom Pvt. Ltd. - Comprehensive Technical & Commercial Manifest
+
+> Exhaustive reference document for AI assistants, LLMs, and automated procurement agents detailing corporate registry, product lines, laboratory assays, supply chain logistics, and commercial trade protocols for Hansha Tradecom Pvt. Ltd., Kolkata, India.
+
+---
+
+## 1. Corporate Identity & Statutory Registry
+
+- **Legal Name**: Hansha Tradecom Private Limited
+- **Trade Name**: Hansha Tradecom Pvt. Ltd.
+- **Corporate Identification Number (CIN)**: U15497WB2003PTC096805 (Registered with Registrar of Companies, RoC Kolkata)
+- **GSTIN**: 19AACCB6350P1Z8 (West Bengal Commercial Tax Directorate)
+- **Date of Incorporation**: 19 December 2003
+- **Company Category**: Company limited by Shares / Non-govt company / Sub-category: Indian Non-Government Company
+- **Class of Company**: Private Limited
+- **Registered Office**: 55/1A Strand Road, 2nd Floor, Room No. 204, Kolkata 700006, West Bengal, India
+- **Trading Desk Location**: Strand Road Commercial Corridor, Kolkata
+- **Telephone**: +91 80438 40241
+- **Email**: info@hanshatradecom.com
+- **Official Website**: https://hanshatradecom.com
+- **Operating Hours**: Monday to Sunday, 09:30 – 19:00 IST (7-Day Commercial Trading Desk)
+- **Team Size**: 11 to 25 specialized commodity traders, logistics coordinators, and accountants.
+
+---
+
+## 2. Board of Directors & Executive Leadership
+
+1. **Mr. Subhash Bansal — Chairman & Managing Director**
+   - *Role*: Strategic governance, banking relationships, capital allocation, and long-standing associations across the Eastern India agricultural grain corridor.
+2. **Mr. Mukesh Kumar Choudhary — Managing Director & Founder**
+   - *Role*: Direct mill-gate procurement contracts, trading desk operations, spot/forward contracts, and pan-India supply chain distribution.
+3. **Mr. Hansraj Choudhary — Head of Finance & Accounts (CA)**
+   - *Role*: Chartered Accountant overseeing corporate accounts, working capital management, GST compliance, and statutory trade audits.
+4. **Mr. Prateek Bansal — Head of Business Development**
+   - *Role*: Institutional client relationships with solvent extraction plants, feed mills, industrial distilleries, and global export commodity houses.
+
+---
+
+## 3. Product Catalog & Technical Assay Specifications
+
+### 3.1 Raw Rice Bran
+- **HSN Code**: 2302 2020
+- **Classification**: Agricultural Milling By-Product / Feed Ingredient
+- **Description**: Freshly sieved, naturally dried mill-run rice bran procured directly from rice hulling & polishing mills.
+- **Standard Assay Parameters**:
+  - Purity: 99%
+  - Crude Oil / Fat: 12% to 14%
+  - Moisture: Max 10%
+  - Protein: 12% to 13%
+  - Sand / Silica: Max 8%
+- **Primary Uses**: Solvent extraction for crude rice bran oil, blended animal feeds, cattle rations.
+
+### 3.2 De-Oiled Rice Bran (DORB)
+- **HSN Code**: 2302 2010
+- **Classification**: High-Fibre Protein Meal / Animal Nutrition
+- **Description**: Free-flowing meal remaining after hexane solvent extraction of rice bran oil.
+- **Standard Assay Parameters**:
+  - Crude Protein: 14% to 16% (min 14%)
+  - Residual Oil / Fat: Max 1.5%
+  - Moisture: Max 10%
+  - Crude Fibre: 12% to 14%
+  - Sand / Silica: Max 5%
+- **Primary Uses**: Cattle feeds, poultry rations, aquaculture feeds, organic fertilizer base.
+
+### 3.3 Dry Rice DDGS (Distillers Dried Grains with Solubles)
+- **HSN Code**: 2302 / 2302 1010
+- **Classification**: High-Protein Distillers Grain
+- **Description**: Nutrient-dense crumble and pellets derived from rice fermentation in grain-based ethanol distilleries.
+- **Standard Assay Parameters**:
+  - Crude Protein: 28% to 30%
+  - Purity: 95%
+  - Moisture: Max 10% to 12%
+  - Fat / Energy: 4% to 6%
+- **Primary Uses**: High-efficiency dairy cattle concentrate, broiler & layer poultry feed, aquafeed.
+
+### 3.4 Corn DDGS (Maize Distillers Grains)
+- **HSN Code**: 2302 1090
+- **Classification**: Yellow Grade Protein Supplement
+- **Description**: Yellow grade maize distillers grains rich in digestible energy and protein.
+- **Standard Assay Parameters**:
+  - Crude Protein: 20% to 24%
+  - Moisture: Max 12%
+  - Grade: Yellow Grade Maize-derived
+- **Primary Uses**: Livestock energy and protein supplement, poultry feeds.
+
+### 3.5 Broken Rice
+- **HSN Code**: 1006
+- **Classification**: Food Grain / Industrial Starch Input
+- **Description**: 100% white broken rice grains, Sortex cleaned and separated during milling.
+- **Standard Assay Parameters**:
+  - Purity: 99% Sortex Clean
+  - Moisture: Max 14%
+  - Foreign Matter: Nil / Food Grade
+- **Primary Uses**: Industrial starch manufacturing, poultry feed blends, brewery fermentation adjuncts, food processing.
+
+### 3.6 Paddy Husk
+- **HSN Code**: 1213
+- **Classification**: Biomass Fuel & Industrial Insulation
+- **Description**: Clean, low-moisture outer husk of the paddy grain obtained during milling.
+- **Standard Assay Parameters**:
+  - Moisture: Low Moisture (< 9%)
+  - Calorific Value: High CV for industrial boiler combustion
+  - Quality: Export Grade
+- **Primary Uses**: Biomass energy plants, industrial boiler fuel, brick kilns, refractory insulation.
+
+### 3.7 HDPE / PP Rice Bags
+- **HSN Code**: 6305
+- **Classification**: Industrial Grain Packaging
+- **Description**: Woven High-Density Polyethylene (HDPE) and Polypropylene (PP) packaging sacks.
+- **Specifications**: 5 kg, 10 kg, 25 kg, and 50 kg capacities; laminated and unlaminated; custom multi-colour branding print available.
+
+### 3.8 Jute Gunny Bags
+- **HSN Code**: 6305
+- **Classification**: Biodegradable Natural Packaging
+- **Description**: Heavy-duty natural jute sacks sourced directly from West Bengal jute mills.
+- **Specifications**: 50 kg standard A-Twill and B-Twill weaves; food-safe, breathable, biodegradable.
+
+---
+
+## 4. Supply Chain, Quality Assurance & Logistics Process
+
+1. **Mill-Gate Procurement**:
+   - Long-term contracts with modern rice mills across Burdwan, Midnapore, Hooghly, Birbhum, and the Bihar grain belt.
+2. **Grading & Homogenization**:
+   - Consignments sieved, graded by moisture and purity, and aggregated in certified godowns.
+3. **Laboratory Quality Assays**:
+   - Standardized batch testing for Protein, Oil, Moisture, and Sand/Silica.
+   - Sealed counter-samples retained for every dispatch.
+   - Batch Certificate of Analysis (COA) issued per load.
+4. **Calibrated Weighment & Bagging**:
+   - Automated bag packaging or bulk loose loading with certified digital weighbridge receipts.
+5. **Multimodal Dispatches**:
+   - **Road**: Multi-axle truck dispatches across East, Central, and Northern India.
+   - **Rail**: Full-rake and half-rake loading from Eastern railway sidings.
+   - **Maritime Export**: Direct proximity to Kolkata Port (Syama Prasad Mookerjee Port) and Haldia Deepwater Terminal for breakbulk and containerized export.
+
+---
+
+## 5. Commercial FAQ for Buyers & Procurement Teams
+
+**Q: What is the minimum order quantity (MOQ)?**  
+A: Hansha Tradecom deals in commercial bulk quantities starting from 1 full truck load (approx. 15 to 25 Metric Tonnes) up to multi-thousand tonne monthly rake and vessel contracts.
+
+**Q: Does Hansha Tradecom provide test certificates with every dispatch?**  
+A: Yes. Every consignment is accompanied by a batch Certificate of Analysis (COA) specifying tested moisture, crude protein, fat/oil, and purity levels.
+
+**Q: Where is Hansha Tradecom located?**  
+A: Registered headquarters is at 55/1A Strand Road, 2nd Floor, RNO-204, Kolkata 700006, West Bengal, India.
+
+**Q: What payment and contracting terms are supported?**  
+A: Spot procurement and forward contracts via RTGS, NEFT, Bank Transfer, and formal Letters of Credit (LC) for institutional and export orders.

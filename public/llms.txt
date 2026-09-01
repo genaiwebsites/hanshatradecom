@@ -1,0 +1,63 @@
+# Hansha Tradecom Pvt. Ltd.
+
+> Bulk supplier and exporter of raw rice bran, de-oiled rice bran (DORB), rice DDGS, corn DDGS, broken rice, paddy husk and industrial grain packaging from Strand Road, Kolkata since 2003.
+
+> Full comprehensive documentation and laboratory specifications: [llms-full.txt](https://hanshatradecom.com/llms-full.txt)
+
+## Corporate Overview
+- **Legal Entity**: Hansha Tradecom Pvt. Ltd.
+- **Incorporation Date**: 19 December 2003
+- **Corporate Identification Number (CIN)**: U15497WB2003PTC096805 (RoC Kolkata)
+- **GSTIN**: 19AACCB6350P1Z8 (West Bengal State Tax)
+- **Registered Office**: 55/1A Strand Road, 2nd Floor, Room No. 204, Kolkata 700006, West Bengal, India
+- **Founder & Managing Director**: Mukesh Kumar Choudhary
+- **Primary Business**: Wholesaler, Distributor & Exporter of Agri Commodities
+- **Operating Hours**: Monday to Sunday, 09:30 – 19:00 IST
+- **Phone**: +91 80438 40241
+- **Email**: info@hanshatradecom.com
+- **Website**: https://hanshatradecom.com
+
+## Sourcing & Freight Corridors
+- **Primary Mill-Gate Sourcing**: Burdwan, Midnapore, Hooghly, Birbhum & Bihar Rice Belt
+- **Maritime Export Ports**: Kolkata Dock System (Syama Prasad Mookerjee Port) & Haldia Deepwater Terminal
+- **Logistics**: Direct mill-to-rake freight, calibrated weighbridge verification, and NABL-accredited batch Certificates of Analysis (COA).
+
+## Product Specifications & HSN Codes
+
+### 1. Raw Rice Bran (HSN: 2302 2020)
+- **Category**: Feed Ingredient / Solvent Oil Extraction
+- **Typical Assays**: 99% Purity, 12-14% Crude Oil / Fat content, Max 10% Moisture, Max 8% Sand/Silica.
+- **Applications**: Rice bran oil expelling, cattle feed, and animal nutrition formulations.
+
+### 2. De-Oiled Rice Bran / DORB (HSN: 2302 2010)
+- **Category**: Feed Ingredient
+- **Typical Assays**: 14-16% Protein, Max 1.5% Residual Oil, Max 10% Moisture, 12-14% Crude Fibre.
+- **Applications**: High-fibre protein meal for poultry, cattle, and aquaculture feeds.
+
+### 3. Dry Rice DDGS (HSN: 2302)
+- **Category**: High-Protein Distillers Grains
+- **Typical Assays**: 28-30% Crude Protein, 4-6% Fat, Max 10% Moisture.
+- **Applications**: Dairy cattle rations, poultry feed formulation, and aqua feed.
+
+### 4. Corn DDGS (HSN: 2302 1090)
+- **Category**: Yellow Grade Maize Distillers Grains
+- **Typical Assays**: 20-24% Crude Protein, High Energy supplement.
+- **Applications**: Commercial livestock and poultry feed blends.
+
+### 5. Broken Rice (HSN: 1006)
+- **Category**: Food Grain / Industrial Processing
+- **Typical Assays**: 99% Sortex Clean, Food Grade, 100% Broken Grain.
+- **Applications**: Starch manufacturing, poultry feed, brewery adjuncts, and food processing.
+
+### 6. Paddy Husk (HSN: 1213)
+- **Category**: Biomass Fuel & Industrial Insulation
+- **Typical Assays**: Low Moisture, High Calorific Value, Export Grade.
+- **Applications**: Industrial boiler fuel, biomass power generation, and refractory insulation.
+
+### 7. HDPE / PP Rice Bags (HSN: 6305)
+- **Category**: Grain Packaging
+- **Specifications**: 5 kg to 50 kg capacity woven sacks, laminated/unlaminated, custom branding print.
+
+### 8. Jute Gunny Bags (HSN: 6305)
+- **Category**: Eco-friendly Grain Packaging
+- **Specifications**: 50 kg standard A-Twill & B-Twill natural jute bags from Bengal mills.
