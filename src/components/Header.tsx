@@ -77,10 +77,6 @@ export default function Header() {
 
         {/* ── Actions & CTA ── */}
         <div className="nav-end">
-          <a href="tel:+918043840241" className="nav-phone-link" title="Call Trade Desk">
-            <Phone size={13} className="text-[var(--gold)]" />
-            <span>+91 80438 40241</span>
-          </a>
           <a href="#contact" className="nav-cta">
             <span>Request a quote</span>
             <ArrowUpRight size={14} className="nav-cta-icon" />
