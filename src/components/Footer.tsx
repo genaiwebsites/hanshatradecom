@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const [year, setYear] = useState(2026);
@@ -34,11 +33,6 @@ export default function Footer() {
             <p>
               Bulk aggregator, supplier and exporter of rice bran, de-oiled bran (DORB), DDGS, broken rice, paddy husk and industrial grain packaging from Strand Road, Kolkata since 2003.
             </p>
-
-            <div className="foot-brand-desk-status">
-              <span className="desk-pulse-dot"></span>
-              <span>Kolkata Operations Active · Mon–Sun</span>
-            </div>
           </div>
 
           {/* Product Lines */}
@@ -80,10 +74,6 @@ export default function Footer() {
               <span className="reg-v">19 December 2003</span>
             </div>
             <div className="foot-registry-item">
-              <span className="reg-k">Managing Director</span>
-              <span className="reg-v">Mukesh Kumar Choudhary</span>
-            </div>
-            <div className="foot-registry-item">
               <span className="reg-k">Registered Office</span>
               <span className="reg-v">55/1A Strand Road, 2nd Floor, RNO-204, Kolkata 700006</span>
             </div>
@@ -92,16 +82,8 @@ export default function Footer() {
         </div>
 
         <div className="foot-bottom">
-          <div className="foot-bottom-left">
+          <div className="foot-bottom-center">
             <span>© {year} Hansha Tradecom Pvt. Ltd. All rights reserved.</span>
-            <span className="foot-bottom-dot">·</span>
-            <span>Strand Road, Kolkata, West Bengal, India.</span>
-          </div>
-          <div className="foot-bottom-right">
-            <a href="#top" className="foot-back-top">
-              <span>Back to top</span>
-              <ArrowUpRight size={13} />
-            </a>
           </div>
         </div>
       </div>

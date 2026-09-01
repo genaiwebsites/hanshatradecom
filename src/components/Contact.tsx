@@ -1,14 +1,30 @@
 "use client";
 
-import { useState, FormEvent } from "react";
-import { Phone, Mail, Clock, MapPin, CheckCircle, Send, FileCheck, Building } from "lucide-react";
+import { useState, useEffect, FormEvent } from "react";
+import { Phone, Mail, Clock, MapPin, CheckCircle, Send, FileCheck, Building, Loader2 } from "lucide-react";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState("Raw Rice Bran");
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
+
+  useEffect(() => {
+    const handleProductSelect = (event: Event) => {
+      const customEvent = event as CustomEvent<{ product: string }>;
+      if (customEvent.detail?.product) {
+        setSelectedProduct(customEvent.detail.product);
+      }
+    };
+
+    window.addEventListener("hansha-select-product", handleProductSelect);
+    return () => window.removeEventListener("hansha-select-product", handleProductSelect);
+  }, []);
 
   const handleSubmit = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
+    if (isSubmitting) return;
+
     const form = evt.currentTarget;
     const nameField = form.elements.namedItem("name") as HTMLInputElement;
     const emailField = form.elements.namedItem("email") as HTMLInputElement;
@@ -33,7 +49,11 @@ export default function Contact() {
     setErrors(newErrors);
 
     if (valid) {
-      setSubmitted(true);
+      setIsSubmitting(true);
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setSubmitted(true);
+      }, 400);
     }
   };
 
@@ -76,9 +96,15 @@ export default function Contact() {
                         autoComplete="name"
                         placeholder="e.g. Mukesh Agarwal"
                         className={errors.name ? "invalid" : ""}
+                        aria-invalid={errors.name ? "true" : "false"}
+                        aria-describedby={errors.name ? "fNameErr" : undefined}
                         onChange={() => setErrors((prev) => ({ ...prev, name: false }))}
                       />
-                      {errors.name && <span className="field-err">Please enter your name</span>}
+                      {errors.name && (
+                        <span id="fNameErr" className="field-err" role="alert">
+                          Please enter your full name
+                        </span>
+                      )}
                     </div>
 
                     <div className="f-field">
@@ -108,9 +134,15 @@ export default function Contact() {
                         autoComplete="email"
                         placeholder="procurement@company.com"
                         className={errors.email ? "invalid" : ""}
+                        aria-invalid={errors.email ? "true" : "false"}
+                        aria-describedby={errors.email ? "fEmailErr" : undefined}
                         onChange={() => setErrors((prev) => ({ ...prev, email: false }))}
                       />
-                      {errors.email && <span className="field-err">Valid email address required</span>}
+                      {errors.email && (
+                        <span id="fEmailErr" className="field-err" role="alert">
+                          Valid corporate email address required
+                        </span>
+                      )}
                     </div>
 
                     <div className="f-field">
@@ -123,6 +155,8 @@ export default function Contact() {
                         type="tel"
                         autoComplete="tel"
                         placeholder="+91 98300 00000"
+                        pattern="[0-9+\s\-()]{8,20}"
+                        title="Enter a valid phone or mobile number (8-20 digits)"
                       />
                     </div>
                   </div>
@@ -134,7 +168,12 @@ export default function Contact() {
                         Product of Interest
                       </label>
                       <div className="select-wrap">
-                        <select id="fProduct" name="product" defaultValue="Raw Rice Bran">
+                        <select 
+                          id="fProduct" 
+                          name="product" 
+                          value={selectedProduct}
+                          onChange={(e) => setSelectedProduct(e.target.value)}
+                        >
                           <option value="Raw Rice Bran">Raw Rice Bran (HSN 2302 2020)</option>
                           <option value="De-Oiled Rice Bran (DORB)">De-Oiled Rice Bran - DORB (HSN 2302 2010)</option>
                           <option value="Dry Rice DDGS">Dry Rice DDGS (HSN 2302)</option>
@@ -172,22 +211,41 @@ export default function Contact() {
                         name="message"
                         placeholder="Destination (FOR / Ex-mill / Port), packaging type (50kg PP/Jute/Loose), target moisture or protein parameters..."
                         className={errors.message ? "invalid" : ""}
+                        aria-invalid={errors.message ? "true" : "false"}
+                        aria-describedby={errors.message ? "fMsgErr" : undefined}
                         onChange={() => setErrors((prev) => ({ ...prev, message: false }))}
                       ></textarea>
-                      {errors.message && <span className="field-err">Please provide brief details on delivery destination or specs</span>}
+                      {errors.message && (
+                        <span id="fMsgErr" className="field-err" role="alert">
+                          Please provide brief details on delivery destination or specs
+                        </span>
+                      )}
                     </div>
                   </div>
 
-                  {/* Submit Button & Response SLA Notice */}
-                  <div className="form-submit-row">
-                    <button type="submit" className="btn btn-solid submit-btn">
-                      <span>Submit quotation request</span>
-                      <Send size={14} />
+                  {/* Submit Button & Response SLA Line */}
+                  <div className="form-submit-wrap">
+                    <button 
+                      type="submit" 
+                      className="btn btn-solid submit-btn" 
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 size={14} className="animate-spin" />
+                          <span>Routing requirement...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Submit quotation request</span>
+                          <Send size={14} />
+                        </>
+                      )}
                     </button>
-                    <div className="submit-sla-badge">
+                    <p className="submit-sla-line">
                       <Clock size={13} className="submit-sla-icon" />
                       <span>Response within 1 business day · Mon to Sun</span>
-                    </div>
+                    </p>
                   </div>
 
                 </form>
@@ -205,7 +263,10 @@ export default function Contact() {
                   <button 
                     type="button" 
                     className="btn btn-outline btn-sm"
-                    onClick={() => setSubmitted(false)}
+                    onClick={() => {
+                      setSubmitted(false);
+                      setIsSubmitting(false);
+                    }}
                   >
                     Submit another requirement
                   </button>

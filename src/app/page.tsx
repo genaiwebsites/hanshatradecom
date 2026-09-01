@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import Company from "@/components/Company";
 import Products from "@/components/Products";
 import Process from "@/components/Process";
@@ -19,7 +18,6 @@ export default function Home() {
       <Header />
       <main id="top">
         <Hero />
-        <Stats />
         <Company />
         <Products />
         <Process />

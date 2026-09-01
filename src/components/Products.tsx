@@ -12,6 +12,14 @@ export default function Products() {
       ? PRODUCTS
       : PRODUCTS.filter((p) => p.category === activeCategory);
 
+  const handleEnquire = (productTitle: string) => {
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent("hansha-select-product", { detail: { product: productTitle } })
+      );
+    }
+  };
+
   return (
     <section className="sec" id="products">
       <div className="container">
@@ -48,42 +56,50 @@ export default function Products() {
 
         {/* Product Grid */}
         <div className="prod-grid">
-          {filteredProducts.map((product) => (
-            <article key={product.id} className="prod-card">
-              <div className="prod-img">
-                <img 
-                  src={product.image} 
-                  alt={product.alt || product.title || product.name}
-                  loading="lazy"
-                />
-                <span className="prod-tag">{product.categoryLabel}</span>
-              </div>
+          {filteredProducts.map((product) => {
+            const title = product.title || product.name;
+            return (
+              <article key={product.id} className="prod-card">
+                <div className="prod-img">
+                  <img 
+                    src={product.image} 
+                    alt={product.alt || title}
+                    loading="lazy"
+                  />
+                  <span className="prod-tag">{product.categoryLabel}</span>
+                </div>
 
-              <div className="prod-body">
-                <div className="prod-header-row">
-                  <h3>{product.title || product.name}</h3>
+                <div className="prod-body">
+                  <div className="prod-header-row">
+                    <h3>{title}</h3>
+                  </div>
+                  <p>{product.description}</p>
+                  
+                  <div className="chips">
+                    {product.chips.map((chip, idx) => (
+                      <span key={idx}>{chip}</span>
+                    ))}
+                  </div>
                 </div>
-                <p>{product.description}</p>
-                
-                <div className="chips">
-                  {product.chips.map((chip, idx) => (
-                    <span key={idx}>{chip}</span>
-                  ))}
-                </div>
-              </div>
 
-              <div className="prod-foot">
-                <div className="prod-hsn-wrap">
-                  <Package size={12} className="text-[var(--ink-4)]" />
-                  <span className="hsn">{product.hsn}</span>
+                <div className="prod-foot">
+                  <div className="prod-hsn-wrap">
+                    <Package size={12} className="text-[var(--ink-4)]" />
+                    <span className="hsn">{product.hsn}</span>
+                  </div>
+                  <a
+                    href="#contact"
+                    className="enquire"
+                    onClick={() => handleEnquire(title)}
+                    aria-label={`Enquire about bulk ${title}`}
+                  >
+                    <span>Enquire</span>
+                    <ArrowRight size={13} strokeWidth={2} />
+                  </a>
                 </div>
-                <a href="#contact" className="enquire">
-                  <span>Enquire</span>
-                  <ArrowRight size={13} strokeWidth={2} />
-                </a>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

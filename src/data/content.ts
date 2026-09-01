@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/176ff7156-01ea-45ec-9085-845325221697.png",
     alt: "Fine golden raw rice bran powder in a brass scoop on jute cloth",
     description: "Fresh mill-run bran for oil extraction and feed blending. Naturally dried, soft texture, gluten free.",
-    chips: ["99% purity", "12 to 14% oil", "1 yr shelf life"],
+    chips: ["99% Purity", "12-14% Oil"],
     hsn: "HSN 2302 2020",
   },
   {
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/157c39e89-c69c-4fe2-b45f-6220e67b9309.png",
     alt: "Pale golden de-oiled rice bran flakes in a steel scoop on kraft paper",
     description: "Solvent-extracted bran for cattle and poultry rations. Consistent fibre, low residual oil, free flowing.",
-    chips: ["Max 1.5% oil", "High fibre", "Bulk or bagged"],
+    chips: ["Max 1.5% Oil", "High Fibre"],
     hsn: "HSN 2302 2010",
   },
   {
@@ -91,7 +91,7 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/186ffe3cc-822c-468a-ab3a-024bfad471fe.png",
     alt: "Amber rice DDGS crumble and pellets in a wooden scoop",
     description: "Protein-rich distillers grains from rice fermentation. Moisture free and nutrient dense for cattle feed.",
-    chips: ["28 to 30% protein", "Moisture free", "95% purity"],
+    chips: ["28-30% Protein", "95% Purity"],
     hsn: "HSN 2302",
   },
   {
@@ -103,7 +103,7 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/14c712b11-873e-4d01-87fe-92475d8a68f3.png",
     alt: "Golden corn DDGS granules pouring from a burlap sack",
     description: "Yellow grade maize distillers grains, a high energy protein supplement for dairy and poultry rations.",
-    chips: ["Yellow grade", "20 to 24% protein", "Ferment derived"],
+    chips: ["20-24% Protein", "Yellow Grade"],
     hsn: "HSN 2302 1090",
   },
   {
@@ -115,7 +115,7 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/18f315526-31de-4cf4-93a1-d31b728ee68b.png",
     alt: "White broken rice grains in an open jute sack on dark slate",
     description: "Hygienically processed white broken rice for food processing, brewing and starch. Sortex cleaned.",
-    chips: ["Sortex clean", "Supreme grade", "5 to 50 kg packs"],
+    chips: ["Sortex Clean 99%", "Food Grade"],
     hsn: "HSN 1006",
   },
   {
@@ -127,7 +127,7 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/178bc9683-671f-4e56-b3e6-81de757243cf.png",
     alt: "Heap of golden paddy husk with a steel scoop at a rice mill",
     description: "Finely processed rice husk for biomass power, boiler fuel and insulation. Export grade material.",
-    chips: ["Low moisture", "Export grade", "Loose or baled"],
+    chips: ["Low Moisture", "Export Grade"],
     hsn: "HSN 1213",
   },
   {
@@ -139,7 +139,7 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/17adac194-be91-40b9-9b92-ceeef543d3b2.png",
     alt: "Neat stack of white woven polypropylene sacks in a warehouse",
     description: "Woven HDPE and PP sacks for grain packing. Custom GSM, laminated options and print on request.",
-    chips: ["5 to 50 kg capacity", "Custom print", "UV stabilised"],
+    chips: ["5-50 kg Sacks", "Custom Print"],
     hsn: "HSN 6305",
   },
   {
@@ -151,44 +151,8 @@ export const PRODUCTS: Product[] = [
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/1c867db16-92ae-4b4e-9cd1-7df8781374dd.png",
     alt: "Stack of natural brown jute gunny bags with coarse weave",
     description: "Natural fibre gunny bags from the Bengal jute belt. Biodegradable, breathable and food safe.",
-    chips: ["50 kg standard", "Biodegradable", "Food safe"],
+    chips: ["50 kg Standard", "Biodegradable"],
     hsn: "HSN 6305",
-  },
-];
-
-export interface StatItem {
-  value: string;
-  unit?: string;
-  title: string;
-  description: string;
-  icon: "heritage" | "products" | "corporate" | "continuity";
-}
-
-export const STATS: StatItem[] = [
-  {
-    value: "22+",
-    title: "Years of Market Acumen",
-    description: "Contracting directly with mill partners across Bengal & Bihar since 2003.",
-    icon: "heritage",
-  },
-  {
-    value: "8",
-    title: "Bulk Commodity Lines",
-    description: "Raw bran, DORB, DDGS, broken rice, husk & industrial packaging.",
-    icon: "products",
-  },
-  {
-    value: "2003",
-    title: "Year Incorporated",
-    description: "Private Limited corporate entity registered with RoC Kolkata.",
-    icon: "corporate",
-  },
-  {
-    value: "7",
-    unit: "Days",
-    title: "Weekly Dispatch",
-    description: "Active loading, weighment, and logistical coordination all 7 days.",
-    icon: "continuity",
   },
 ];
 
