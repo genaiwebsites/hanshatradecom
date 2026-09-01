@@ -1,25 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Instrument_Sans, Spline_Sans_Mono } from "next/font/google";
+import { Syne, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-instrument-serif",
+  variable: "--font-syne",
   display: "swap",
+  weight: ["500", "600", "700", "800"],
 });
 
-const instrumentSans = Instrument_Sans({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-instrument-sans",
+  variable: "--font-jetbrains-mono",
   display: "swap",
-});
-
-const splineSansMono = Spline_Sans_Mono({
-  weight: ["400", "500"],
-  subsets: ["latin"],
-  variable: "--font-spline-mono",
-  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {
@@ -117,9 +111,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${instrumentSans.variable} ${splineSansMono.variable}`}
+      className={`${syne.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

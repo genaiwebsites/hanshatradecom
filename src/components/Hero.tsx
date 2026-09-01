@@ -25,8 +25,8 @@ export default function Hero() {
             <span className="provenance-meta">Private Limited Company · Incorporated 2003</span>
           </div>
           <div className="hero-provenance-right">
-            <MapPin size={12} className="text-[var(--gold)]" />
-            <span>55/1A Strand Road, Kolkata 700006</span>
+            <ShieldCheck size={12} className="text-[var(--gold)]" />
+            <span>Spot & Forward Contract Desk</span>
           </div>
         </div>
 
@@ -38,11 +38,11 @@ export default function Hero() {
             <div className="hero-text-block">
               <h1 className="hero-headline">
                 Bulk agri commodities,<br />
-                sourced from Bengal&apos;s <em>rice mills.</em>
+                <span className="hero-gold-accent">direct from the mill.</span>
               </h1>
 
               <p className="hero-paragraph">
-                Rice bran, de-oiled bran (DORB), DDGS, broken rice, paddy husk and industrial packaging — contracted at the mill gate, tested under standardized assays, and dispatched across India and export corridors.
+                Aggregating rice bran, DORB, DDGS, broken rice, and paddy husk directly at Bengal&apos;s mill gates — assay-certified, weighbridge-verified, and dispatched nationwide.
               </p>
 
               <div className="hero-action-group">
@@ -80,10 +80,6 @@ export default function Hero() {
                 className="hero-warehouse-img"
                 loading="eager"
               />
-              <div className="hero-warehouse-badge">
-                <span className="hero-badge-tag">Strand Road Godown</span>
-                <span className="hero-badge-text">Graded Ex-Kolkata</span>
-              </div>
             </div>
 
             {/* Grid of 4 compact industrial telemetry cells */}
