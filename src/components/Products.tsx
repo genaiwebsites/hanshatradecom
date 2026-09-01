@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { PRODUCTS, CATEGORIES, CategoryId } from "@/data/content";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Package } from "lucide-react";
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
@@ -17,24 +17,33 @@ export default function Products() {
       <div className="container">
         <div className="sec-head">
           <div>
-            <h2 className="sec-title">Product portfolio.</h2>
+            <h2 className="sec-title">Bulk commodities &amp; packaging.</h2>
           </div>
           <p className="sec-meta">
-            Feed ingredients, food grains, biomass and packaging, all in bulk.
+            Eight essential product lines sourced directly from grain mills, graded under strict parameters, and supplied in bulk.
           </p>
         </div>
 
         {/* Filter Tabs */}
-        <div className="filters">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat.id}
-              className={`filter-btn ${activeCategory === cat.id ? "active" : ""}`}
-              onClick={() => setActiveCategory(cat.id)}
-            >
-              {cat.label}
-            </button>
-          ))}
+        <div className="filters-container">
+          <div className="filters">
+            {CATEGORIES.map((cat) => {
+              const count = cat.id === "all" 
+                ? PRODUCTS.length 
+                : PRODUCTS.filter(p => p.category === cat.id).length;
+              return (
+                <button
+                  key={cat.id}
+                  className={`filter-btn ${activeCategory === cat.id ? "active" : ""}`}
+                  onClick={() => setActiveCategory(cat.id)}
+                  type="button"
+                >
+                  <span>{cat.label}</span>
+                  <span className="filter-count">{count}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Product Grid */}
@@ -42,22 +51,35 @@ export default function Products() {
           {filteredProducts.map((product) => (
             <article key={product.id} className="prod-card">
               <div className="prod-img">
-                <img src={product.image} alt={product.title} />
+                <img 
+                  src={product.image} 
+                  alt={product.alt || product.title || product.name}
+                  loading="lazy"
+                />
                 <span className="prod-tag">{product.categoryLabel}</span>
               </div>
+
               <div className="prod-body">
-                <h3>{product.title}</h3>
+                <div className="prod-header-row">
+                  <h3>{product.title || product.name}</h3>
+                </div>
                 <p>{product.description}</p>
+                
                 <div className="chips">
                   {product.chips.map((chip, idx) => (
                     <span key={idx}>{chip}</span>
                   ))}
                 </div>
               </div>
+
               <div className="prod-foot">
-                <span className="hsn">{product.hsn}</span>
+                <div className="prod-hsn-wrap">
+                  <Package size={12} className="text-[var(--ink-4)]" />
+                  <span className="hsn">{product.hsn}</span>
+                </div>
                 <a href="#contact" className="enquire">
-                  Enquire <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Enquire</span>
+                  <ArrowRight size={13} strokeWidth={2} />
                 </a>
               </div>
             </article>

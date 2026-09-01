@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -8,20 +9,20 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    const ids = ["company", "products", "process", "quality", "logistics"];
+    const ids = ["company", "products", "process", "leadership", "quality", "logistics"];
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) setActiveSection(e.target.id);
         });
       },
-      { rootMargin: "-40% 0px -55% 0px" }
+      { rootMargin: "-35% 0px -55% 0px" }
     );
     ids.forEach((id) => {
       const el = document.getElementById(id);
@@ -38,6 +39,7 @@ export default function Header() {
     { href: "#company", label: "Company" },
     { href: "#products", label: "Products" },
     { href: "#process", label: "Process" },
+    { href: "#leadership", label: "Leadership" },
     { href: "#quality", label: "Quality" },
     { href: "#logistics", label: "Logistics" },
   ];
@@ -47,15 +49,17 @@ export default function Header() {
       <div className="nav-inner">
         {/* ── Brand ── */}
         <a className="nav-brand" href="#top" aria-label="Hansha Tradecom home">
-          <span className="nav-brand-mark">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18">
-              <path d="M12 3c2.3 3 2.3 6.8 0 9.8-2.3-3-2.3-6.8 0-9.8z" />
-              <path d="M6.2 7.6c3.1.7 5.3 3.5 5.4 7.1-3.1-.7-5.3-3.5-5.4-7.1z" />
-              <path d="M17.8 7.6c-3.1.7-5.3 3.5-5.4 7.1 3.1-.7 5.3-3.5 5.4-7.1z" />
-              <path d="M11.4 14.5h1.2V21h-1.2z" />
-            </svg>
-          </span>
-          <span className="nav-brand-name">Hansha Tradecom</span>
+          <img
+            src="/images/brand/hansha-tradecom-logo-128.png"
+            alt="Hansha Tradecom Logo"
+            width={40}
+            height={40}
+            className="nav-brand-img"
+          />
+          <div className="nav-brand-text">
+            <span className="nav-brand-name">Hansha Tradecom</span>
+            <span className="nav-brand-sub">Pvt. Ltd. · Est. 2003</span>
+          </div>
         </a>
 
         {/* ── Desktop Nav ── */}
@@ -74,7 +78,8 @@ export default function Header() {
         {/* ── CTA + Burger ── */}
         <div className="nav-end">
           <a href="#contact" className="nav-cta">
-            Request a quote
+            <span>Request a quote</span>
+            <ArrowUpRight size={14} className="nav-cta-icon" />
           </a>
           <button
             className="burger"

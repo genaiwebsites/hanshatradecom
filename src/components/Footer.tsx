@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const [year, setYear] = useState(2026);
@@ -16,56 +17,92 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="foot-brand">
-            <span className="brand-mark">
-              <svg viewBox="0 0 24 24" fill="#F5F2EA" aria-hidden="true" width="22" height="22">
-                <path d="M12 3c2.3 3 2.3 6.8 0 9.8-2.3-3-2.3-6.8 0-9.8z" />
-                <path d="M6.2 7.6c3.1.7 5.3 3.5 5.4 7.1-3.1-.7-5.3-3.5-5.4-7.1z" />
-                <path d="M17.8 7.6c-3.1.7-5.3 3.5-5.4 7.1 3.1-.7 5.3-3.5 5.4-7.1z" />
-                <path d="M11.4 14.5h1.2V21h-1.2z" />
-              </svg>
-            </span>
+            <a href="#top" className="foot-brand-header" aria-label="Hansha Tradecom home">
+              <img
+                src="/images/brand/hansha-tradecom-logo-128.png"
+                alt="Hansha Tradecom Logo"
+                width={44}
+                height={44}
+                className="foot-brand-img"
+              />
+              <div className="foot-brand-title">
+                <h4>Hansha Tradecom</h4>
+                <span>Private Limited</span>
+              </div>
+            </a>
+            
             <p>
-              Hansha Tradecom Pvt. Ltd. supplies rice bran, DDGS, broken rice, paddy husk
-              and grain packaging in bulk, from Strand Road, Kolkata, since 2003.
+              Bulk aggregator, supplier and exporter of rice bran, de-oiled bran (DORB), DDGS, broken rice, paddy husk and industrial grain packaging from Strand Road, Kolkata since 2003.
             </p>
+
+            <div className="foot-brand-desk-status">
+              <span className="desk-pulse-dot"></span>
+              <span>Kolkata Trade Desk Active · Mon–Sun</span>
+            </div>
           </div>
 
-          {/* Products */}
+          {/* Product Lines */}
           <div className="foot-col">
-            <h5>Products</h5>
-            <a href="#products">Raw rice bran</a>
-            <a href="#products">De-oiled rice bran</a>
-            <a href="#products">Rice and corn DDGS</a>
-            <a href="#products">Broken rice</a>
-            <a href="#products">Paddy husk</a>
-            <a href="#products">Rice bags and gunny</a>
+            <h5>Product Lines</h5>
+            <a href="#products">Raw Rice Bran (HSN 2302)</a>
+            <a href="#products">De-Oiled Rice Bran (DORB)</a>
+            <a href="#products">Dry Rice DDGS &amp; Corn DDGS</a>
+            <a href="#products">Sortex Clean Broken Rice</a>
+            <a href="#products">Paddy Husk for Biomass</a>
+            <a href="#products">HDPE / PP &amp; Jute Gunny Bags</a>
           </div>
 
-          {/* Company */}
+          {/* Governance & Operations */}
           <div className="foot-col">
-            <h5>Company</h5>
-            <a href="#company">The firm</a>
-            <a href="#process">Process</a>
-            <a href="#quality">Quality</a>
-            <a href="#logistics">Logistics</a>
-            <a href="#contact">Request a quote</a>
+            <h5>Organization</h5>
+            <a href="#company">The Trading House</a>
+            <a href="#products">Bulk Portfolio</a>
+            <a href="#process">Five-Step Process</a>
+            <a href="#leadership">Leadership &amp; Directors</a>
+            <a href="#quality">Quality Standards &amp; COA</a>
+            <a href="#logistics">Port &amp; Rail Logistics</a>
+            <a href="#contact">Request a Quotation</a>
           </div>
 
-          {/* Registry */}
+          {/* Registry & Statutory */}
           <div className="foot-col">
-            <h5>Registry</h5>
-            <span className="mono-sm">CIN: U15497WB2003PTC096805</span>
-            <span className="mono-sm">GSTIN: 19AACCB6350P1Z8</span>
-            <span className="mono-sm">Incorporated: 19 December 2003</span>
-            <span className="mono-sm">Director: Mukesh Kumar Choudhary</span>
-            <span className="mono-sm">55/1A Strand Road, Kolkata 700006</span>
+            <h5>Corporate Registry</h5>
+            <div className="foot-registry-item">
+              <span className="reg-k">CIN</span>
+              <span className="reg-v mono-sm">U15497WB2003PTC096805</span>
+            </div>
+            <div className="foot-registry-item">
+              <span className="reg-k">GSTIN</span>
+              <span className="reg-v mono-sm">19AACCB6350P1Z8</span>
+            </div>
+            <div className="foot-registry-item">
+              <span className="reg-k">Incorporated</span>
+              <span className="reg-v">19 December 2003</span>
+            </div>
+            <div className="foot-registry-item">
+              <span className="reg-k">Managing Director</span>
+              <span className="reg-v">Mukesh Kumar Choudhary</span>
+            </div>
+            <div className="foot-registry-item">
+              <span className="reg-k">Registered Office</span>
+              <span className="reg-v">55/1A Strand Road, 2nd Floor, RNO-204, Kolkata 700006</span>
+            </div>
           </div>
 
         </div>
 
         <div className="foot-bottom">
-          <span>© {year} Hansha Tradecom Pvt. Ltd. All rights reserved.</span>
-          <span>Strand Road, Kolkata. Open Monday to Sunday.</span>
+          <div className="foot-bottom-left">
+            <span>© {year} Hansha Tradecom Pvt. Ltd. All rights reserved.</span>
+            <span className="foot-bottom-dot">·</span>
+            <span>Strand Road, Kolkata, West Bengal, India.</span>
+          </div>
+          <div className="foot-bottom-right">
+            <a href="#top" className="foot-back-top">
+              <span>Back to top</span>
+              <ArrowUpRight size={13} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

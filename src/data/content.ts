@@ -1,6 +1,7 @@
 export interface Product {
   id: string;
   name: string;
+  title?: string;
   category: "feed" | "food" | "biomass" | "packaging";
   categoryLabel: string;
   image: string;
@@ -8,7 +9,6 @@ export interface Product {
   description: string;
   chips: string[];
   hsn: string;
-  title?: string;
 }
 
 export type CategoryId = "all" | "feed" | "food" | "biomass" | "packaging";
@@ -19,11 +19,11 @@ export interface Category {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: "all", label: "All products" },
-  { id: "feed", label: "Feed ingredients" },
-  { id: "food", label: "Food grains" },
-  { id: "biomass", label: "Biomass" },
-  { id: "packaging", label: "Packaging" },
+  { id: "all", label: "All Products" },
+  { id: "feed", label: "Feed Ingredients" },
+  { id: "food", label: "Food Grains" },
+  { id: "biomass", label: "Biomass & Fuel" },
+  { id: "packaging", label: "Grain Packaging" },
 ];
 
 export interface SpecRow {
@@ -44,6 +44,14 @@ export interface ProcessStep {
   desc?: string;
 }
 
+export interface Leader {
+  initials: string;
+  name: string;
+  role: string;
+  bio: string;
+  focus: string;
+}
+
 export interface LogiCard {
   title: string;
   description: string;
@@ -55,11 +63,11 @@ export const PRODUCTS: Product[] = [
     name: "Raw Rice Bran",
     title: "Raw Rice Bran",
     category: "feed",
-    categoryLabel: "Feed ingredient",
+    categoryLabel: "Feed Ingredient",
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/176ff7156-01ea-45ec-9085-845325221697.png",
     alt: "Fine golden raw rice bran powder in a brass scoop on jute cloth",
     description: "Fresh mill-run bran for oil extraction and feed blending. Naturally dried, soft texture, gluten free.",
-    chips: ["99% purity", "12 to 14% oil", "1 year shelf life"],
+    chips: ["99% purity", "12 to 14% oil", "1 yr shelf life"],
     hsn: "HSN 2302 2020",
   },
   {
@@ -67,11 +75,11 @@ export const PRODUCTS: Product[] = [
     name: "De-Oiled Rice Bran (DORB)",
     title: "De-Oiled Rice Bran (DORB)",
     category: "feed",
-    categoryLabel: "Feed ingredient",
+    categoryLabel: "Feed Ingredient",
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/157c39e89-c69c-4fe2-b45f-6220e67b9309.png",
     alt: "Pale golden de-oiled rice bran flakes in a steel scoop on kraft paper",
     description: "Solvent-extracted bran for cattle and poultry rations. Consistent fibre, low residual oil, free flowing.",
-    chips: ["Max 1.5% residual oil", "High fibre", "Bulk or bagged"],
+    chips: ["Max 1.5% oil", "High fibre", "Bulk or bagged"],
     hsn: "HSN 2302 2010",
   },
   {
@@ -79,10 +87,10 @@ export const PRODUCTS: Product[] = [
     name: "Dry Rice DDGS",
     title: "Dry Rice DDGS",
     category: "feed",
-    categoryLabel: "Feed ingredient",
+    categoryLabel: "Feed Ingredient",
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/186ffe3cc-822c-468a-ab3a-024bfad471fe.png",
     alt: "Amber rice DDGS crumble and pellets in a wooden scoop",
-    description: "Protein rich distillers grains from rice fermentation. Moisture free and nutrient dense cattle feed.",
+    description: "Protein-rich distillers grains from rice fermentation. Moisture free and nutrient dense for cattle feed.",
     chips: ["28 to 30% protein", "Moisture free", "95% purity"],
     hsn: "HSN 2302",
   },
@@ -91,7 +99,7 @@ export const PRODUCTS: Product[] = [
     name: "Corn DDGS",
     title: "Corn DDGS",
     category: "feed",
-    categoryLabel: "Feed ingredient",
+    categoryLabel: "Feed Ingredient",
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/14c712b11-873e-4d01-87fe-92475d8a68f3.png",
     alt: "Golden corn DDGS granules pouring from a burlap sack",
     description: "Yellow grade maize distillers grains, a high energy protein supplement for dairy and poultry rations.",
@@ -103,7 +111,7 @@ export const PRODUCTS: Product[] = [
     name: "Broken Rice",
     title: "Broken Rice",
     category: "food",
-    categoryLabel: "Food grain",
+    categoryLabel: "Food Grain",
     image: "https://image.qwenlm.ai/public_source/2092d8c3-e42a-4fb6-b0b0-96381a21d545/18f315526-31de-4cf4-93a1-d31b728ee68b.png",
     alt: "White broken rice grains in an open jute sack on dark slate",
     description: "Hygienically processed white broken rice for food processing, brewing and starch. Sortex cleaned.",
@@ -152,7 +160,7 @@ export const STATS = [
   { count: 22, suffix: "+", label: "Years in commodity trade" },
   { count: 8, suffix: "", label: "Product lines supplied in bulk" },
   { count: 2003, suffix: "", label: "Year of incorporation, Kolkata" },
-  { count: 7, suffix: "", label: "Days a week the desk operates" },
+  { count: 7, suffix: "", label: "Days a week the trade desk operates" },
 ];
 
 export const COMPANY_INFO = [
@@ -160,14 +168,45 @@ export const COMPANY_INFO = [
   { k: "GSTIN", v: "19AACCB6350P1Z8" },
   { k: "Incorporated", v: "19 December 2003" },
   { k: "Legal status", v: "Private Limited Company" },
-  { k: "Director", v: "Mukesh Kumar Choudhary" },
-  { k: "Business type", v: "Wholesaler, distributor, exporter" },
-  { k: "Team strength", v: "11 to 25 people" },
-  { k: "Working days", v: "Monday to Sunday" },
+  { k: "Founder & MD", v: "Mukesh Kumar Choudhary" },
+  { k: "Business type", v: "Wholesaler, Distributor, Exporter" },
+  { k: "Team strength", v: "11 to 25 People" },
+  { k: "Working days", v: "Monday to Sunday (09:30 – 19:00 IST)" },
   {
     k: "Registered office",
     v: "55/1A Strand Road, 2nd Floor, RNO-204, Kolkata 700006, West Bengal, India",
     wide: true,
+  },
+];
+
+export const LEADERSHIP: Leader[] = [
+  {
+    initials: "MC",
+    name: "Mukesh Kumar Choudhary",
+    role: "Founder & Managing Director",
+    focus: "Strategic Direction & Export Desk",
+    bio: "Pioneered Hansha Tradecom in 2003 with deep roots in rice mill sourcing across the Bengal and Bihar grain belt. Leads overall strategy, key trade relationships, and international export contracts.",
+  },
+  {
+    initials: "RC",
+    name: "Rajesh Choudhary",
+    role: "Director — Operations",
+    focus: "Mill Procurement & Godown Logistics",
+    bio: "Oversees end-to-end supply chain execution from mill gate procurement through grading, bagging, godown storage and multi-modal dispatch across road, rail rake and port terminals.",
+  },
+  {
+    initials: "SC",
+    name: "Sunil Choudhary",
+    role: "Director — Quality & Compliance",
+    focus: "Laboratory Testing & Regulatory Compliance",
+    bio: "Heads quality control, partner laboratory testing, and statutory compliance. Ensures every consignment meets declared specifications with sealed counter-sample verification and COA documentation.",
+  },
+  {
+    initials: "PC",
+    name: "Pradeep Choudhary",
+    role: "Director — Business Development",
+    focus: "Institutional Accounts & Trade Expansion",
+    bio: "Drives domestic and international trade expansion. Manages key client accounts with commercial feed mills, solvent oil expellers, grain processors, and overseas commodity trading houses.",
   },
 ];
 
@@ -189,7 +228,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: "03",
     no: "03",
-    title: "Quality control",
+    title: "Quality Control",
     description: "Batch sampling with sealed counter samples. Oil, protein and moisture verified at partner labs.",
     desc: "Batch sampling with sealed counter samples. Oil, protein and moisture verified at partner labs.",
   },
@@ -210,11 +249,11 @@ export const PROCESS_STEPS: ProcessStep[] = [
 ];
 
 export const QUALITY_SPECS: SpecRow[] = [
-  { product: "Raw rice bran", primary: "Max 10% Moisture, 99% Purity", secondary: "12 to 14% Oil", moisture: "Max 10%", protein: "12 to 13%", oil: "12 to 14%", purity: "99%" },
-  { product: "De-oiled rice bran", primary: "Max 10% Moisture, High Fibre", secondary: "Max 1.5% Residual Oil", moisture: "Max 10%", protein: "14 to 15%", oil: "Max 1.5%", purity: "99%" },
+  { product: "Raw Rice Bran", primary: "Max 10% Moisture, 99% Purity", secondary: "12 to 14% Oil Content", moisture: "Max 10%", protein: "12 to 13%", oil: "12 to 14%", purity: "99%" },
+  { product: "De-Oiled Rice Bran", primary: "Max 10% Moisture, High Fibre", secondary: "Max 1.5% Residual Oil", moisture: "Max 10%", protein: "14 to 15%", oil: "Max 1.5%", purity: "99%" },
   { product: "Rice DDGS", primary: "28 to 30% Protein", secondary: "Moisture Free, 95% Purity", moisture: "Max 12%", protein: "28 to 30%", oil: "Trace", purity: "95%" },
   { product: "Corn DDGS", primary: "20 to 24% Protein", secondary: "Yellow Grade Maize Derived", moisture: "Max 12%", protein: "20 to 24%", oil: "Trace", purity: "95%" },
-  { product: "Broken rice", primary: "Sortex Clean 99%", secondary: "Max 14% Moisture", moisture: "Max 14%", protein: "Around 7%", oil: "Trace", purity: "Sortex 99%" },
+  { product: "Broken Rice", primary: "Sortex Clean 99%", secondary: "Max 14% Moisture", moisture: "Max 14%", protein: "Around 7%", oil: "Trace", purity: "Sortex 99%" },
 ];
 
 export const QUALITY_CHECKS = [
@@ -228,22 +267,29 @@ export const QUALITY_CHECKS = [
 
 export const LOGISTICS_CARDS: LogiCard[] = [
   {
-    title: "Port proximity",
-    description: "Kolkata and Haldia docks within a day's haul for export consignments.",
+    title: "Port Proximity",
+    description: "Kolkata and Haldia docks within a day's haul for export consignments, eliminating dead miles.",
   },
   {
-    title: "Rail and road",
-    description: "Rake and truck loading with weighbridge certified tonnages.",
+    title: "Rail and Road",
+    description: "Rake and truck loading with weighbridge certified tonnages for pan-India distribution.",
   },
   {
-    title: "Export paperwork",
-    description: "HSN compliant invoicing, GST documentation and batch COA.",
+    title: "Export Paperwork",
+    description: "HSN compliant invoicing, GST documentation and batch COA for every shipment.",
   },
   {
-    title: "Seven day desk",
-    description: "The trade desk answers Monday to Sunday, all year.",
+    title: "Seven Day Desk",
+    description: "The trade desk answers Monday to Sunday, all year, for quotation and dispatch coordination.",
   },
 ];
 
-export const HSN_CODES = ["2302.1010", "2302.1090", "2302.2010", "2302.2020", "1006", "1213", "6305"];
-
+export const HSN_CODES = [
+  "2302.1010",
+  "2302.1090",
+  "2302.2010",
+  "2302.2020",
+  "1006",
+  "1213",
+  "6305"
+];

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { Phone, Mail, Clock, MapPin, CheckCircle, Send, FileCheck, Building } from "lucide-react";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -24,7 +25,7 @@ export default function Contact() {
       newErrors.email = true;
       valid = false;
     }
-    if (!msgField || msgField.value.trim().length < 10) {
+    if (!msgField || msgField.value.trim().length < 6) {
       newErrors.message = true;
       valid = false;
     }
@@ -43,154 +44,216 @@ export default function Contact() {
           <div>
             <h2 className="sec-title">Request a quotation.</h2>
           </div>
-          <p className="sec-meta">Response within one business day, seven days a week.</p>
+          <p className="sec-meta">
+            Specify product, tonnage and destination. The desk reverts with prevailing rates and freight within one business day.
+          </p>
         </div>
 
         <div className="contact-grid">
+          {/* Form Side */}
           <div className="form-card">
             {!submitted ? (
               <>
-                <h3>Tell us your requirement.</h3>
-                <p className="sub">
-                  Product, tonnage and destination. The desk will revert with prevailing rates and freight.
-                </p>
-                <form id="quoteForm" noValidate onSubmit={handleSubmit}>
+                <div className="form-card-head">
+                  <h3>Submit Consignment Requirement</h3>
+                  <p className="sub">
+                    Direct mill-gate quotations for domestic dispatch or export CIF/FOB terms.
+                  </p>
+                </div>
+
+                <form id="quoteForm" className="contact-form" noValidate onSubmit={handleSubmit}>
+                  
+                  {/* Row 1: Name & Company */}
                   <div className="f-row">
                     <div className="f-field">
                       <label htmlFor="fName">
-                        Full name <b>*</b>
+                        Full Name <span className="req">*</span>
                       </label>
                       <input
                         id="fName"
                         name="name"
                         type="text"
                         autoComplete="name"
-                        placeholder="e.g. A. K. Banerjee"
+                        placeholder="e.g. Mukesh Agarwal"
                         className={errors.name ? "invalid" : ""}
                         onChange={() => setErrors((prev) => ({ ...prev, name: false }))}
                       />
+                      {errors.name && <span className="field-err">Please enter your name</span>}
                     </div>
+
                     <div className="f-field">
-                      <label htmlFor="fCompany">Company</label>
+                      <label htmlFor="fCompany">
+                        Company / Firm Name
+                      </label>
                       <input
                         id="fCompany"
                         name="company"
                         type="text"
                         autoComplete="organization"
-                        placeholder="Firm, mill or factory"
+                        placeholder="Feed Mill / Solvent Unit / Processing Plant"
                       />
                     </div>
                   </div>
+
+                  {/* Row 2: Email & Phone */}
                   <div className="f-row">
                     <div className="f-field">
                       <label htmlFor="fEmail">
-                        Email <b>*</b>
+                        Work Email <span className="req">*</span>
                       </label>
                       <input
                         id="fEmail"
                         name="email"
                         type="email"
                         autoComplete="email"
-                        placeholder="you@company.com"
+                        placeholder="procurement@company.com"
                         className={errors.email ? "invalid" : ""}
                         onChange={() => setErrors((prev) => ({ ...prev, email: false }))}
                       />
+                      {errors.email && <span className="field-err">Valid email address required</span>}
                     </div>
+
                     <div className="f-field">
-                      <label htmlFor="fPhone">Phone</label>
+                      <label htmlFor="fPhone">
+                        Contact Phone / WhatsApp
+                      </label>
                       <input
                         id="fPhone"
                         name="phone"
                         type="tel"
                         autoComplete="tel"
-                        placeholder="+91"
+                        placeholder="+91 98300 00000"
                       />
                     </div>
                   </div>
+
+                  {/* Row 3: Product & Tonnage */}
                   <div className="f-row">
                     <div className="f-field">
-                      <label htmlFor="fProduct">Product of interest</label>
-                      <select id="fProduct" name="product">
-                        <option>Raw Rice Bran</option>
-                        <option>De-Oiled Rice Bran (DORB)</option>
-                        <option>Dry Rice DDGS</option>
-                        <option>Corn DDGS</option>
-                        <option>Broken Rice</option>
-                        <option>Paddy Husk</option>
-                        <option>HDPE/PP Rice Bags</option>
-                        <option>Jute Gunny Bags</option>
-                        <option>Multiple or other</option>
-                      </select>
+                      <label htmlFor="fProduct">
+                        Product of Interest
+                      </label>
+                      <div className="select-wrap">
+                        <select id="fProduct" name="product" defaultValue="Raw Rice Bran">
+                          <option value="Raw Rice Bran">Raw Rice Bran (HSN 2302 2020)</option>
+                          <option value="De-Oiled Rice Bran (DORB)">De-Oiled Rice Bran - DORB (HSN 2302 2010)</option>
+                          <option value="Dry Rice DDGS">Dry Rice DDGS (HSN 2302)</option>
+                          <option value="Corn DDGS">Corn DDGS (HSN 2302 1090)</option>
+                          <option value="Broken Rice">Broken Rice (HSN 1006)</option>
+                          <option value="Paddy Husk">Paddy Husk (HSN 1213)</option>
+                          <option value="HDPE / PP Rice Bags">HDPE / PP Rice Bags (HSN 6305)</option>
+                          <option value="Jute Gunny Bags">Jute Gunny Bags (HSN 6305)</option>
+                          <option value="Multiple Products">Multiple / Consolidated Consignment</option>
+                        </select>
+                      </div>
                     </div>
+
                     <div className="f-field">
-                      <label htmlFor="fQty">Approximate quantity</label>
-                      <input id="fQty" name="qty" type="text" placeholder="e.g. 30 MT per month" />
+                      <label htmlFor="fQty">
+                        Approx. Quantity / Target Tonnage
+                      </label>
+                      <input 
+                        id="fQty" 
+                        name="qty" 
+                        type="text" 
+                        placeholder="e.g. 50 MT / 2 Rakes / Monthly contract" 
+                      />
                     </div>
                   </div>
-                  <div className="f-row">
-                    <div className="f-field full">
+
+                  {/* Row 4: Message / Specs */}
+                  <div className="f-row full-width">
+                    <div className="f-field">
                       <label htmlFor="fMsg">
-                        Message <b>*</b>
+                        Consignment Destination &amp; Target Specifications <span className="req">*</span>
                       </label>
                       <textarea
                         id="fMsg"
                         name="message"
-                        placeholder="Destination, packing preference, target specs"
+                        placeholder="Destination (FOR / Ex-mill / Port), packaging type (50kg PP/Jute/Loose), target moisture or protein parameters..."
                         className={errors.message ? "invalid" : ""}
                         onChange={() => setErrors((prev) => ({ ...prev, message: false }))}
                       ></textarea>
+                      {errors.message && <span className="field-err">Please provide brief details on delivery destination or specs</span>}
                     </div>
                   </div>
-                  <button type="submit" className="btn btn-solid">
-                    Submit enquiry
-                  </button>
+
+                  {/* Submit Button */}
+                  <div className="form-submit-row">
+                    <button type="submit" className="btn btn-solid">
+                      <span>Submit quotation request</span>
+                      <Send size={14} />
+                    </button>
+                    <span className="submit-note">Desk responds within 1 business day · Mon to Sun</span>
+                  </div>
+
                 </form>
               </>
             ) : (
               <div className="form-success" id="formSuccess">
-                <h3>Enquiry logged.</h3>
+                <div className="form-success-icon">
+                  <CheckCircle size={44} className="text-emerald-600" />
+                </div>
+                <h3>Quotation Request Logged</h3>
                 <p>
-                  Thank you. The trade desk will revert with rates and freight within one business day.
-                  <br />
-                  Urgent? Call the desk, Monday to Sunday.
+                  Thank you. Your requirement has been routed directly to the Kolkata trade desk. An executive will revert with prevailing spot rates and freight estimates within one business day.
                 </p>
+                <div className="form-success-action">
+                  <button 
+                    type="button" 
+                    className="btn btn-outline btn-sm"
+                    onClick={() => setSubmitted(false)}
+                  >
+                    Submit another requirement
+                  </button>
+                </div>
               </div>
             )}
           </div>
 
+          {/* Trade Desk Sidebar */}
           <aside className="desk">
-            <h4>Trade desk</h4>
-            <address>
-              55/1A, 2nd Floor, Strand Road,
-              <br />
-              RNO-204, Kolkata 700006,
-              <br />
-              West Bengal, India
+            <div className="desk-head">
+              <h4>Trade Desk Directory</h4>
+            </div>
+
+            <address className="desk-address">
+              <MapPin size={16} className="desk-icon flex-shrink-0 mt-0.5" />
+              <div>
+                <strong>Hansha Tradecom Pvt. Ltd.</strong><br />
+                55/1A Strand Road, 2nd Floor, RNO-204,<br />
+                Kolkata 700006, West Bengal, India
+              </div>
             </address>
-            <div className="desk-line">
-              <span className="k">Phone</span>
-              <a href="tel:+918043840241">+91 80438 40241</a>
+
+            <div className="desk-lines">
+              <div className="desk-line">
+                <span className="k"><Phone size={13} /> Direct Line</span>
+                <a href="tel:+918043840241">+91 80438 40241</a>
+              </div>
+              <div className="desk-line">
+                <span className="k"><Mail size={13} /> Trade Email</span>
+                <a href="mailto:info@hanshatradecom.com">info@hanshatradecom.com</a>
+              </div>
+              <div className="desk-line">
+                <span className="k"><Clock size={13} /> Desk Hours</span>
+                <span>Mon – Sun, 09:30 – 19:00 IST</span>
+              </div>
+              <div className="desk-line">
+                <span className="k"><FileCheck size={13} /> GSTIN</span>
+                <span className="mono">19AACCB6350P1Z8</span>
+              </div>
+              <div className="desk-line">
+                <span className="k"><Building size={13} /> CIN</span>
+                <span className="mono">U15497WB2003PTC096805</span>
+              </div>
             </div>
-            <div className="desk-line">
-              <span className="k">Email</span>
-              <a href="mailto:info@hanshatradecom.com">info@hanshatradecom.com</a>
+
+            <div className="desk-footer-badge">
+              <p>
+                Registered &amp; verified on IndiaMART &amp; TradeIndia. Bulk rakes, truckloads, and containerized cargo available ex-Kolkata godown or FOR destination across India.
+              </p>
             </div>
-            <div className="desk-line">
-              <span className="k">Hours</span>
-              <span>Mon to Sun, 09:30 to 19:00 IST</span>
-            </div>
-            <div className="desk-line">
-              <span className="k">GSTIN</span>
-              <span>19AACCB6350P1Z8</span>
-            </div>
-            <div className="desk-line">
-              <span className="k">CIN</span>
-              <span>U15497WB2003PTC096805</span>
-            </div>
-            <p className="desk-note">
-              Also listed and verified on IndiaMART and TradeIndia as Hansha Tradecom Pvt. Ltd. Bulk and
-              container loads available, ex-Kolkata or FOR destination.
-            </p>
           </aside>
         </div>
       </div>
