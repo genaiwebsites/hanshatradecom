@@ -37,7 +37,7 @@ export default function Footer() {
 
             <div className="foot-brand-desk-status">
               <span className="desk-pulse-dot"></span>
-              <span>Kolkata Trade Desk Active · Mon–Sun</span>
+              <span>Kolkata Operations Active · Mon–Sun</span>
             </div>
           </div>
 

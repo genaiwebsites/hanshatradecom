@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Check, Copy, ShieldCheck, MapPin, Clock, Building2, Anchor, PhoneCall } from "lucide-react";
+import { ArrowRight, Check, Copy, ShieldCheck, MapPin, Clock, Building2, Anchor } from "lucide-react";
 
 export default function Hero() {
   const [copied, setCopied] = useState<string | null>(null);
@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="hero-provenance-bar">
           <div className="hero-provenance-left">
             <span className="live-pulse-dot" />
-            <span className="provenance-title">Kolkata Trade Desk Active</span>
+            <span className="provenance-title">Kolkata Operations Active</span>
             <span className="provenance-sep">·</span>
             <span className="provenance-meta">Private Limited Company · Incorporated 2003</span>
           </div>
@@ -52,10 +52,6 @@ export default function Hero() {
                 </a>
                 <a href="#products" className="btn btn-outline">
                   <span>Explore 8 product lines</span>
-                </a>
-                <a href="tel:+918043840241" className="hero-call-btn" title="Call Trade Desk">
-                  <PhoneCall size={14} />
-                  <span>Trade Desk</span>
                 </a>
               </div>
             </div>
@@ -103,7 +99,7 @@ export default function Hero() {
 
               <div className="hero-telemetry-cell">
                 <div className="telemetry-cell-head">
-                  <span className="telemetry-cell-k"><Clock size={11} /> Trade Desk</span>
+                  <span className="telemetry-cell-k"><Clock size={11} /> Working Hours</span>
                 </div>
                 <div className="telemetry-cell-val">Mon – Sun</div>
                 <div className="telemetry-cell-sub">09:30 – 19:00 IST · 7 Days</div>

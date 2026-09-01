@@ -29,7 +29,7 @@ export default function Company() {
               and supply bulk agri commodities directly to feed mills, solvent oil expellers, food manufacturers and global exporters.
             </p>
             <p>
-              Operating from our trade desk on Strand Road — the historic commercial spine of Kolkata — we manage the complete consignment chain: mill-gate procurement, strict laboratory sampling, calibrated weighbridge verification, and dispatch via road, rake or vessel.
+              Operating from our headquarters on Strand Road — the historic commercial spine of Kolkata — we manage the complete consignment chain: mill-gate procurement, strict laboratory sampling, calibrated weighbridge verification, and dispatch via road, rake or vessel.
             </p>
             <div className="about-quote">
               &ldquo;Reliable mill-gate sourcing, consistent quality grading and transparent trade execution since 2003.&rdquo;

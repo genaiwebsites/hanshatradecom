@@ -8,7 +8,7 @@ export default function Process() {
       <div className="container">
         <div className="sec-head">
           <div>
-            <h2 className="sec-title text-white">How the desk operates.</h2>
+            <h2 className="sec-title text-white">How our supply chain works.</h2>
           </div>
           <p className="sec-meta text-slate-300">
             From mill gate to laboratory assay, calibrated weighbridge, and multi-modal dispatch.

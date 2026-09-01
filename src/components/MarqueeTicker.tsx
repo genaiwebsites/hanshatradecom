@@ -12,7 +12,7 @@ const TICKER_ITEMS = [
   "HDPE / PP Rice Bags",
   "Bengal Jute Gunny Bags",
   "Kolkata & Haldia Ports",
-  "Monday to Sunday Desk",
+  "7-Day Operations",
 ];
 
 export default function MarqueeTicker() {

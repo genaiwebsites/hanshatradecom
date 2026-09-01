@@ -45,7 +45,7 @@ export default function Contact() {
             <h2 className="sec-title">Request a quotation.</h2>
           </div>
           <p className="sec-meta">
-            Specify product, tonnage and destination. The desk reverts with prevailing rates and freight within one business day.
+            Specify product, tonnage and destination. Our team responds with prevailing spot rates and freight estimates within one business day.
           </p>
         </div>
 
@@ -178,13 +178,16 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Submit Button */}
+                  {/* Submit Button & Response SLA Notice */}
                   <div className="form-submit-row">
-                    <button type="submit" className="btn btn-solid">
+                    <button type="submit" className="btn btn-solid submit-btn">
                       <span>Submit quotation request</span>
                       <Send size={14} />
                     </button>
-                    <span className="submit-note">Desk responds within 1 business day · Mon to Sun</span>
+                    <div className="submit-sla-badge">
+                      <Clock size={13} className="submit-sla-icon" />
+                      <span>Response within 1 business day · Mon to Sun</span>
+                    </div>
                   </div>
 
                 </form>
@@ -196,7 +199,7 @@ export default function Contact() {
                 </div>
                 <h3>Quotation Request Logged</h3>
                 <p>
-                  Thank you. Your requirement has been routed directly to the Kolkata trade desk. An executive will revert with prevailing spot rates and freight estimates within one business day.
+                  Thank you. Your requirement has been routed directly to our commercial team. An executive will revert with prevailing spot rates and freight estimates within one business day.
                 </p>
                 <div className="form-success-action">
                   <button 
@@ -211,10 +214,10 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Trade Desk Sidebar */}
+          {/* Office Directory Sidebar */}
           <aside className="desk">
             <div className="desk-head">
-              <h4>Trade Desk Directory</h4>
+              <h4>Commercial Office Directory</h4>
             </div>
 
             <address className="desk-address">
@@ -232,11 +235,11 @@ export default function Contact() {
                 <a href="tel:+918043840241">+91 80438 40241</a>
               </div>
               <div className="desk-line">
-                <span className="k"><Mail size={13} /> Trade Email</span>
+                <span className="k"><Mail size={13} /> Email</span>
                 <a href="mailto:info@hanshatradecom.com">info@hanshatradecom.com</a>
               </div>
               <div className="desk-line">
-                <span className="k"><Clock size={13} /> Desk Hours</span>
+                <span className="k"><Clock size={13} /> Business Hours</span>
                 <span>Mon – Sun, 09:30 – 19:00 IST</span>
               </div>
               <div className="desk-line">

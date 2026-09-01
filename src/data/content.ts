@@ -49,7 +49,7 @@ export interface Leader {
   name: string;
   role: string;
   bio: string;
-  focus: string;
+  credential?: string;
 }
 
 export interface LogiCard {
@@ -156,11 +156,40 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
-export const STATS = [
-  { count: 22, suffix: "+", label: "Years in commodity trade" },
-  { count: 8, suffix: "", label: "Product lines supplied in bulk" },
-  { count: 2003, suffix: "", label: "Year of incorporation, Kolkata" },
-  { count: 7, suffix: "", label: "Days a week the trade desk operates" },
+export interface StatItem {
+  value: string;
+  unit?: string;
+  title: string;
+  description: string;
+  icon: "heritage" | "products" | "corporate" | "continuity";
+}
+
+export const STATS: StatItem[] = [
+  {
+    value: "22+",
+    title: "Years of Market Acumen",
+    description: "Contracting directly with mill partners across Bengal & Bihar since 2003.",
+    icon: "heritage",
+  },
+  {
+    value: "8",
+    title: "Bulk Commodity Lines",
+    description: "Raw bran, DORB, DDGS, broken rice, husk & industrial packaging.",
+    icon: "products",
+  },
+  {
+    value: "2003",
+    title: "Year Incorporated",
+    description: "Private Limited corporate entity registered with RoC Kolkata.",
+    icon: "corporate",
+  },
+  {
+    value: "7",
+    unit: "Days",
+    title: "Weekly Dispatch",
+    description: "Active loading, weighment, and logistical coordination all 7 days.",
+    icon: "continuity",
+  },
 ];
 
 export const COMPANY_INFO = [
@@ -181,32 +210,29 @@ export const COMPANY_INFO = [
 
 export const LEADERSHIP: Leader[] = [
   {
+    initials: "SB",
+    name: "Mr. Subhash Bansal",
+    role: "Chairman & Managing Director",
+    bio: "Provides overall leadership, governance, and commercial guidance to the company. Shapes the firm's strategic trade direction, financial foundation, and long-standing associations across the Eastern grain corridor.",
+  },
+  {
     initials: "MC",
-    name: "Mukesh Kumar Choudhary",
-    role: "Founder & Managing Director",
-    focus: "Strategic Direction & Export Desk",
-    bio: "Pioneered Hansha Tradecom in 2003 with deep roots in rice mill sourcing across the Bengal and Bihar grain belt. Leads overall strategy, key trade relationships, and international export contracts.",
+    name: "Mr. Mukesh Kumar Choudhary",
+    role: "Managing Director",
+    bio: "Manages core trading desk operations, mill-gate procurement contracts, and supply chain logistics across Bengal, Bihar, and domestic distribution centers.",
   },
   {
-    initials: "RC",
-    name: "Rajesh Choudhary",
-    role: "Director — Operations",
-    focus: "Mill Procurement & Godown Logistics",
-    bio: "Oversees end-to-end supply chain execution from mill gate procurement through grading, bagging, godown storage and multi-modal dispatch across road, rail rake and port terminals.",
+    initials: "HC",
+    name: "Mr. Hansraj Choudhary",
+    role: "Head of Finance & Accounts",
+    bio: "Chartered Accountant managing financial planning, corporate accounts, working capital banking facilities, taxation, and statutory audit compliance.",
+    credential: "CA",
   },
   {
-    initials: "SC",
-    name: "Sunil Choudhary",
-    role: "Director — Quality & Compliance",
-    focus: "Laboratory Testing & Regulatory Compliance",
-    bio: "Heads quality control, partner laboratory testing, and statutory compliance. Ensures every consignment meets declared specifications with sealed counter-sample verification and COA documentation.",
-  },
-  {
-    initials: "PC",
-    name: "Pradeep Choudhary",
-    role: "Director — Business Development",
-    focus: "Institutional Accounts & Trade Expansion",
-    bio: "Drives domestic and international trade expansion. Manages key client accounts with commercial feed mills, solvent oil expellers, grain processors, and overseas commodity trading houses.",
+    initials: "PB",
+    name: "Mr. Prateek Bansal",
+    role: "Head of Business Development",
+    bio: "Leads institutional sales and client relationships, coordinating regular bulk commodity supply with feed manufacturers, oil expellers, and processing plants.",
   },
 ];
 
@@ -279,8 +305,8 @@ export const LOGISTICS_CARDS: LogiCard[] = [
     description: "HSN compliant invoicing, GST documentation and batch COA for every shipment.",
   },
   {
-    title: "Seven Day Desk",
-    description: "The trade desk answers Monday to Sunday, all year, for quotation and dispatch coordination.",
+    title: "Seven-Day Operations",
+    description: "Our commercial team is available Monday to Sunday, all year, for quotation and dispatch coordination.",
   },
 ];
 

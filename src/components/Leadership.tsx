@@ -8,10 +8,10 @@ export default function Leadership() {
       <div className="container">
         <div className="sec-head">
           <div>
-            <h2 className="sec-title">The people behind the desk.</h2>
+            <h2 className="sec-title">Executive leadership.</h2>
           </div>
           <p className="sec-meta">
-            Two decades of commodity trade acumen rooted in Eastern India&apos;s agricultural corridors.
+            Decades of commodity trade acumen, fiscal governance and mill relationships in Eastern India.
           </p>
         </div>
 
@@ -22,18 +22,17 @@ export default function Leadership() {
                 <div className="leader-avatar">
                   <span>{leader.initials}</span>
                 </div>
-                <span className="leader-idx">DIR · 0{idx + 1}</span>
               </div>
               
               <div className="leader-content">
-                <h3 className="leader-name">{leader.name}</h3>
+                <div className="leader-name-wrap">
+                  <h3 className="leader-name">{leader.name}</h3>
+                  {leader.credential && (
+                    <span className="leader-cred-tag">{leader.credential}</span>
+                  )}
+                </div>
                 <p className="leader-role">{leader.role}</p>
-                <div className="leader-focus-badge">{leader.focus}</div>
                 <p className="leader-bio">{leader.bio}</p>
-              </div>
-
-              <div className="leader-foot">
-                <span className="leader-desk-tag">Hansha Trade Desk · Kolkata</span>
               </div>
             </article>
           ))}
