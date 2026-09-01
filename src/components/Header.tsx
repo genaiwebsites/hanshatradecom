@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -9,7 +9,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -45,7 +45,7 @@ export default function Header() {
   ];
 
   return (
-    <header id="siteHeader" className={scrolled ? "scrolled" : ""}>
+    <header id="siteHeader" className={`header-root ${scrolled ? "scrolled" : "at-top"}`}>
       <div className="nav-inner">
         {/* ── Brand ── */}
         <a className="nav-brand" href="#top" aria-label="Hansha Tradecom home">
@@ -62,7 +62,7 @@ export default function Header() {
           </div>
         </a>
 
-        {/* ── Desktop Nav ── */}
+        {/* ── Desktop Nav Links ── */}
         <nav className="nav-links" aria-label="Primary navigation">
           {navLinks.map(({ href, label }) => (
             <a
@@ -70,13 +70,17 @@ export default function Header() {
               href={href}
               className={activeSection === href.slice(1) ? "active" : ""}
             >
-              {label}
+              <span>{label}</span>
             </a>
           ))}
         </nav>
 
-        {/* ── CTA + Burger ── */}
+        {/* ── Actions & CTA ── */}
         <div className="nav-end">
+          <a href="tel:+918043840241" className="nav-phone-link" title="Call Trade Desk">
+            <Phone size={13} className="text-[var(--gold)]" />
+            <span>+91 80438 40241</span>
+          </a>
           <a href="#contact" className="nav-cta">
             <span>Request a quote</span>
             <ArrowUpRight size={14} className="nav-cta-icon" />
@@ -102,6 +106,11 @@ export default function Header() {
                 {label}
               </a>
             ))}
+            <div className="mob-contact-row">
+              <a href="tel:+918043840241" className="mob-phone">
+                <Phone size={14} /> +91 80438 40241
+              </a>
+            </div>
             <a href="#contact" className="mob-cta" onClick={() => setMenuOpen(false)}>
               Request a quote
             </a>
