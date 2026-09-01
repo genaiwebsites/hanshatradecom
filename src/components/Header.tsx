@@ -56,10 +56,7 @@ export default function Header() {
             height={40}
             className="nav-brand-img"
           />
-          <div className="nav-brand-text">
-            <span className="nav-brand-name">Hansha Tradecom</span>
-            <span className="nav-brand-sub">Pvt. Ltd. · Est. 2003</span>
-          </div>
+          <span className="nav-brand-name">Hansha Tradecom</span>
         </a>
 
         {/* ── Desktop Nav Links ── */}
