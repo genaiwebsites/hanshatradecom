@@ -10,10 +10,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import RevealObserver from "@/components/RevealObserver";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
     <>
+      <SmoothScroll />
       <RevealObserver />
       <Header />
       <main id="top">

@@ -175,26 +175,26 @@ export const COMPANY_INFO = [
 export const LEADERSHIP: Leader[] = [
   {
     initials: "SB",
-    name: "Mr. Subhash Bansal",
+    name: "Subhash Bansal",
     role: "Chairman & Managing Director",
-    bio: "Provides overall leadership, governance, and commercial guidance to the company. Shapes the firm's strategic trade direction, financial foundation, and long-standing associations across the Eastern grain corridor.",
+    bio: "Provides strategic leadership, governance, and commercial guidance. Shapes the firm's trade direction, financial foundation, and associations across the Eastern grain corridor.",
   },
   {
     initials: "MC",
-    name: "Mr. Mukesh Kumar Choudhary",
+    name: "Mukesh K. Choudhary",
     role: "Managing Director",
     bio: "Manages core trading desk operations, mill-gate procurement contracts, and supply chain logistics across Bengal, Bihar, and domestic distribution centers.",
   },
   {
     initials: "HC",
-    name: "Mr. Hansraj Choudhary",
+    name: "Hansraj Choudhary",
     role: "Head of Finance & Accounts",
     bio: "Chartered Accountant managing financial planning, corporate accounts, working capital banking facilities, taxation, and statutory audit compliance.",
     credential: "CA",
   },
   {
     initials: "PB",
-    name: "Mr. Prateek Bansal",
+    name: "Prateek Bansal",
     role: "Head of Business Development",
     bio: "Leads institutional sales and client relationships, coordinating regular bulk commodity supply with feed manufacturers, oil expellers, and processing plants.",
   },
