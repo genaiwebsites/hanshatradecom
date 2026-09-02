@@ -9,6 +9,21 @@ export default function Footer() {
     setYear(new Date().getFullYear());
   }, []);
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "")) {
+      e.preventDefault();
+      if (window.location.hash) {
+        window.history.pushState(null, "", "/");
+      }
+      const lenis = (window as unknown as { __lenis?: { scrollTo: (target: number, opts?: { duration?: number }) => void } }).__lenis;
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 1.0 });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <footer>
       <div className="container">
@@ -16,7 +31,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="foot-brand">
-            <a href="#top" className="foot-brand-header" aria-label="Hansha Tradecom home">
+            <a href="/" onClick={handleLogoClick} className="foot-brand-header" aria-label="Hansha Tradecom home">
               <img
                 src="/images/brand/hansha-tradecom-logo-128.png"
                 alt="Hansha Tradecom Logo"
@@ -75,7 +90,10 @@ export default function Footer() {
             </div>
             <div className="foot-registry-item">
               <span className="reg-k">Registered Office</span>
-              <span className="reg-v">55/1A Strand Road, 2nd Floor, RNO-204, Kolkata 700006</span>
+              <span className="reg-v">
+                55/1A Strand Road, 2nd Floor, RNO-204,<br />
+                Kolkata 700006
+              </span>
             </div>
           </div>
 

@@ -636,11 +636,24 @@ header.header-root.drawer-open .burger span {
    HERO SECTION — FULL-WIDTH ARCHITECTURAL STAGE
 ════════════════════════════════════════════ */
 .hero-stage {
-  padding-top: calc(var(--nav-h) + 18px);
-  padding-bottom: 36px;
+  padding-top: calc(var(--nav-h) + 16px);
+  padding-bottom: 32px;
   background: transparent;
   position: relative;
   border-bottom: none;
+  box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  .hero-stage {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc(var(--nav-h) + 12px);
+    padding-bottom: 24px;
+  }
 }
 
 .hero-canvas {
@@ -947,7 +960,7 @@ header.header-root.drawer-open .burger span {
   background: 
     radial-gradient(ellipse 60% 40% at 50% 0%, rgba(212, 169, 78, 0.07), transparent 70%),
     linear-gradient(180deg, #FAF8F2 0%, #FFFFFF 100%);
-  border-top: 1px solid var(--border-light);
+  border-top: none;
 }
 
 .about-grid {
@@ -1284,31 +1297,64 @@ header.header-root.drawer-open .burger span {
 
 .step-card {
   background: var(--green);
-  padding: 1.5rem var(--sp-3);
+  padding: 1.6rem var(--sp-4);
   display: flex;
   flex-direction: column;
-  transition: background 0.2s;
+  position: relative;
+  transition: background 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
 }
 .step-card:hover {
-  background: #143021;
+  background: #143323;
 }
 
-.step-num-wrap {
+.step-icon-wrap {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: var(--sp-2);
+  gap: 12px;
+  margin-bottom: var(--sp-3);
 }
-.step-num {
-  font-family: var(--f-mono);
-  font-size: 1rem;
-  font-weight: 500;
+
+.step-icon-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background: rgba(212, 169, 78, 0.08);
+  border: 1px solid rgba(212, 169, 78, 0.22);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step-icon {
   color: var(--gold-light);
+  stroke-width: 1.8;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
+
 .step-line {
   flex: 1;
   height: 1px;
   background: rgba(255, 255, 255, 0.12);
+  transition: background 0.3s ease;
+}
+
+/* Subtle micro-interactions on hover */
+.step-card:hover .step-icon-badge {
+  background: rgba(212, 169, 78, 0.18);
+  border-color: var(--gold-light);
+  box-shadow: 0 0 16px rgba(212, 169, 78, 0.28);
+  transform: translateY(-2px);
+}
+
+.step-card:hover .step-icon {
+  transform: scale(1.12);
+  filter: drop-shadow(0 2px 6px rgba(212, 169, 78, 0.45));
+}
+
+.step-card:hover .step-line {
+  background: linear-gradient(90deg, rgba(212, 169, 78, 0.5), rgba(255, 255, 255, 0.12));
 }
 
 .step-title {
@@ -1322,6 +1368,10 @@ header.header-root.drawer-open .burger span {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.55;
+  transition: color 0.2s ease;
+}
+.step-card:hover .step-desc {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 /* ════════════════════════════════════════════
@@ -2069,8 +2119,8 @@ footer {
 
 .foot-col h5 {
   font-family: var(--f-mono);
-  font-size: 9px;
-  letter-spacing: 0.2em;
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-light);
   margin-bottom: var(--sp-3);
@@ -2079,34 +2129,37 @@ footer {
 .foot-col a {
   display: block;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
   padding: 0.22rem 0;
   transition: color 0.18s;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 .foot-col a:hover {
   color: #FFF;
 }
 
 .foot-registry-item {
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 .reg-k {
   display: block;
   font-family: var(--f-mono);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 2px;
 }
 .reg-v {
   font-size: 0.82rem;
   color: rgba(255, 255, 255, 0.75);
+  line-height: 1.45;
 }
 .mono-sm {
   font-family: var(--f-mono);
-  font-size: 10px;
+  font-size: 0.82rem;
   letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .foot-bottom {

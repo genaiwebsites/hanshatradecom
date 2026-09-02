@@ -54,11 +54,26 @@ export default function Header() {
     { href: "#logistics", label: "Logistics" },
   ];
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "")) {
+      e.preventDefault();
+      if (window.location.hash) {
+        window.history.pushState(null, "", "/");
+      }
+      const lenis = (window as unknown as { __lenis?: { scrollTo: (target: number, opts?: { duration?: number }) => void } }).__lenis;
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 1.0 });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <header id="siteHeader" className={`header-root ${scrolled ? "scrolled" : "at-top"} ${menuOpen ? "drawer-open" : ""}`}>
       <div className="nav-inner">
         {/* ── Brand ── */}
-        <a className="nav-brand" href="#top" aria-label="Hansha Tradecom home">
+        <a className="nav-brand" href="/" onClick={handleLogoClick} aria-label="Hansha Tradecom home">
           <img
             src="/images/brand/hansha-tradecom-logo-128.png"
             alt="Hansha Tradecom Logo"
