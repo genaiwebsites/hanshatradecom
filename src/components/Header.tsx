@@ -45,7 +45,7 @@ export default function Header() {
   ];
 
   return (
-    <header id="siteHeader" className={`header-root ${scrolled ? "scrolled" : "at-top"}`}>
+    <header id="siteHeader" className={`header-root ${scrolled ? "scrolled" : "at-top"} ${menuOpen ? "drawer-open" : ""}`}>
       <div className="nav-inner">
         {/* ── Brand ── */}
         <a className="nav-brand" href="#top" aria-label="Hansha Tradecom home">
