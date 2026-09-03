@@ -709,6 +709,7 @@ header.header-root {
   right: 0;
   z-index: var(--z-sticky);
   height: var(--nav-h);
+  background: transparent;
   border-bottom: 1px solid transparent;
   transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.35s ease,
@@ -717,22 +718,23 @@ header.header-root {
   will-change: background, border-color, box-shadow;
 }
 
-/* State 1: At the top (Frosted substrate glass blending seamlessly with active theme — no border) */
+/* State 1: At the top (Completely transparent — zero background color, zero border, zero shadow) */
+header.header-root:not(.scrolled),
 header.header-root.at-top {
-  background: var(--nav-bg-top);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom-color: transparent;
-  box-shadow: none;
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid transparent !important;
+  box-shadow: none !important;
 }
 
 /* State 2: Scrolled (Luxury deep architectural frosted glass matched to active theme with subtle border) */
 header.header-root.scrolled {
-  background: var(--nav-bg-scrolled);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom-color: var(--nav-border-scrolled);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+  background: var(--nav-bg-scrolled) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid var(--nav-border-scrolled) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24) !important;
 }
 
 .nav-inner {
