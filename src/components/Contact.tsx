@@ -244,7 +244,7 @@ export default function Contact() {
                     </button>
                     <p className="submit-sla-line">
                       <Clock size={13} className="submit-sla-icon" />
-                      <span>Response within 1 business day · Mon to Sun</span>
+                      <span>Response within 1 business day · Mon to Sat</span>
                     </p>
                   </div>
 
@@ -301,7 +301,7 @@ export default function Contact() {
               </div>
               <div className="desk-line">
                 <span className="k"><Clock size={13} /> Business Hours</span>
-                <span>Mon – Sun, 09:30 – 19:00 IST</span>
+                <span>Mon – Sat, 11:00 AM – 7:00 PM IST</span>
               </div>
               <div className="desk-line">
                 <span className="k"><FileCheck size={13} /> GSTIN</span>

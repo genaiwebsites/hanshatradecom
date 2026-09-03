@@ -164,7 +164,7 @@ export const COMPANY_INFO = [
   { k: "Founder & MD", v: "Mukesh Kumar Choudhary" },
   { k: "Business type", v: "Wholesaler, Distributor, Exporter" },
   { k: "Team strength", v: "11 to 25 People" },
-  { k: "Working days", v: "Monday to Sunday (09:30 – 19:00 IST)" },
+  { k: "Working days", v: "Monday to Saturday (11:00 AM – 7:00 PM IST)" },
   {
     k: "Registered office",
     v: "55/1A Strand Road, 2nd Floor, RNO-204, Kolkata 700006, West Bengal, India",
@@ -269,8 +269,8 @@ export const LOGISTICS_CARDS: LogiCard[] = [
     description: "HSN compliant invoicing, GST documentation and batch COA for every shipment.",
   },
   {
-    title: "Seven-Day Operations",
-    description: "Our commercial team is available Monday to Sunday, all year, for quotation and dispatch coordination.",
+    title: "Commercial Trading Desk",
+    description: "Our commercial team is available Monday to Saturday, 11:00 AM to 7:00 PM, for quotation and dispatch coordination.",
   },
 ];
 

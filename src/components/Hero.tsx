@@ -95,8 +95,8 @@ export default function Hero() {
                 <div className="telemetry-cell-head">
                   <span className="telemetry-cell-k"><Clock size={11} /> Working Hours</span>
                 </div>
-                <div className="telemetry-cell-val">Mon – Sun</div>
-                <div className="telemetry-cell-sub">09:30 – 19:00 IST · 7 Days</div>
+                <div className="telemetry-cell-val">Mon – Sat</div>
+                <div className="telemetry-cell-sub">11:00 AM – 7:00 PM IST</div>
               </div>
 
               <button
