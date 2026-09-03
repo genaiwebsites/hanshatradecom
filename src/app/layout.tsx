@@ -44,22 +44,22 @@ export const metadata: Metadata = {
   authors: [{ name: "Hansha Tradecom Pvt. Ltd." }],
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/images/brand/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-      { url: "/images/brand/favicon-16x16.png", type: "image/png", sizes: "16x16" },
-      { url: "/images/brand/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/images/brand/favicon-32x32.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/images/brand/favicon-16x16.png?v=2", type: "image/png", sizes: "16x16" },
+      { url: "/images/brand/favicon-48x48.png?v=2", type: "image/png", sizes: "48x48" },
     ],
     apple: [
-      { url: "/images/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/brand/apple-touch-icon.png?v=2", sizes: "180x180", type: "image/png" },
     ],
     other: [
       {
         rel: "android-chrome-192x192",
-        url: "/images/brand/android-chrome-192x192.png",
+        url: "/images/brand/android-chrome-192x192.png?v=2",
       },
       {
         rel: "android-chrome-512x512",
-        url: "/images/brand/android-chrome-512x512.png",
+        url: "/images/brand/android-chrome-512x512.png?v=2",
       },
     ],
   },
@@ -450,6 +450,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="granary"
       suppressHydrationWarning
       className={`${syne.variable} ${jetbrainsMono.variable}`}
     >
@@ -461,7 +462,7 @@ export default function RootLayout({
         <script
           id="theme-initializer"
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('hansha-theme');if(t==='maritime'||t==='terra'||t==='heritage'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`,
+            __html: `(function(){try{document.documentElement.setAttribute('data-theme','granary');localStorage.setItem('hansha-theme','granary');}catch(e){}})();`,
           }}
         />
         <script

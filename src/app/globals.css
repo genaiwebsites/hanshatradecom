@@ -2,11 +2,89 @@
 
 /* ─────────────────────────────────────────────────────────────────────────────
    HANSHA TRADECOM PVT. LTD. — BESPOKE INDUSTRIAL EDITORIAL DESIGN SYSTEM
-   Kolkata Agri-Commodity House · High Craft & Non-AI-Slop Architecture
 ───────────────────────────────────────────────────────────────────────────── */
 
 /* ════ Design Tokens & Themes ════ */
 :root,
+[data-theme="granary"] {
+  --theme-name: "Granary Earth & Golden Malt";
+
+  /* Primary Deep Spectrum — Earthy Moss Green & Roasted Walnut Peat */
+  --green-deep:     #11140E;
+  --green:          #1C2016;
+  --green-mid:      #2E3624;
+  --green-surface:  #424A35;
+  --green-subtle:   #F3F5EE;
+
+  /* Accent Spectrum — Golden Malt & Toasted Amber Gold */
+  --gold:           #B88828;
+  --gold-light:     #E5B842;
+  --gold-hover:     #9C6E1A;
+  --gold-subtle:    rgba(184, 136, 40, 0.14);
+  --gold-border:    rgba(229, 184, 66, 0.38);
+
+  /* Substrates & Ink — Clean Malt Parchment & High-Contrast Readability */
+  --bg:             #F8F6F0;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #EFECE2;
+  --stone:          #E2DEC6;
+
+  --border:         #D6D0BD;
+  --border-mid:     #BEB7A1;
+  --border-light:   #EAE5D5;
+
+  /* High Readability Ink Hierarchy (WCAG AAA compliant) */
+  --ink:            #11140D;  /* Deepest pitch peat-carbon — max readability */
+  --ink-2:          #242B1D;  /* Rich dark olive-carbon for headings and bold text */
+  --ink-3:          #3F4835;  /* Darkened from #5C644E -> 7:1 contrast for clear body/subtext */
+  --ink-4:          #5E6952;  /* Darkened from #8C967B -> 4.8:1 contrast for tags/captions */
+
+  /* Hero & Industrial Surfaces — Malting Granary & Feed Processing */
+  --hero-bar-bg:       #11140E;
+  --hero-body-bg:      #171B13;
+  --hero-left-bg:      rgba(28, 32, 22, 0.65);
+  --hero-right-bg:     rgba(17, 20, 14, 0.88);
+  --hero-telemetry-bg: rgba(24, 28, 19, 0.92);
+  --hero-border:       rgba(229, 184, 66, 0.38);
+  --accent-gradient:   linear-gradient(135deg, #E5B842 0%, #B88828 50%, #8A6820 100%);
+  --btn-gradient:      linear-gradient(135deg, #E5B842 0%, #B88828 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #F0C85A 0%, #A0741E 100%);
+  --btn-solid-text:    #11140D;
+  --step-card-hover:   #262B1D;
+
+  /* Navbar Dynamic Surfaces */
+  --nav-bg-top:        rgba(248, 246, 240, 0.92);
+  --nav-bg-scrolled:   rgba(17, 20, 14, 0.97);
+  --nav-border-scrolled: rgba(229, 184, 66, 0.28);
+
+  /* Typography — Modern Swiss Heavy Industrial */
+  --f-display: var(--font-syne), "Syne", "Cabinet Grotesk", sans-serif;
+  --f-body:    'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --f-mono:    var(--font-jetbrains-mono), "JetBrains Mono", monospace;
+
+  /* Spacing Scale */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  80px;
+
+  /* Layout */
+  --nav-h:      62px;
+  --max-w:      1200px;
+  --px:         clamp(18px, 3.5vw, 40px);
+
+  /* Z-Index */
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    300;
+  --z-toast:    400;
+}
+
 [data-theme="heritage"] {
   --theme-name: "Hooghly Heritage";
 
@@ -55,33 +133,6 @@
   --nav-bg-top:        rgba(248, 247, 244, 0.88);
   --nav-bg-scrolled:   rgba(8, 21, 14, 0.95);
   --nav-border-scrolled: rgba(212, 169, 78, 0.2);
-
-  /* Typography — Modern Swiss Heavy Industrial */
-  --f-display: var(--font-syne), "Syne", "Cabinet Grotesk", sans-serif;
-  --f-body:    'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --f-mono:    var(--font-jetbrains-mono), "JetBrains Mono", monospace;
-
-  /* Spacing Scale */
-  --sp-1:  4px;
-  --sp-2:  8px;
-  --sp-3:  12px;
-  --sp-4:  16px;
-  --sp-5:  24px;
-  --sp-6:  32px;
-  --sp-7:  48px;
-  --sp-8:  64px;
-  --sp-9:  80px;
-
-  /* Layout */
-  --nav-h:      62px;
-  --max-w:      1200px;
-  --px:         clamp(18px, 3.5vw, 40px);
-
-  /* Z-Index */
-  --z-dropdown: 100;
-  --z-sticky:   200;
-  --z-modal:    300;
-  --z-toast:    400;
 }
 
 [data-theme="maritime"] {
@@ -95,11 +146,11 @@
   --green-subtle:   #EBF2F9;
   
   /* Accent Spectrum — Navigational Beacon Amber & Harbor Gold */
-  --gold:           #C2782A;
-  --gold-light:     #E0923E;
-  --gold-hover:     #A8631E;
-  --gold-subtle:    rgba(194, 120, 42, 0.14);
-  --gold-border:    rgba(224, 146, 62, 0.32);
+  --gold:           #D9771E;
+  --gold-light:     #F59B38;
+  --gold-hover:     #B85C10;
+  --gold-subtle:    rgba(217, 119, 30, 0.14);
+  --gold-border:    rgba(217, 119, 30, 0.38);
 
   /* Substrates & Ink — Cool Harbor Mist */
   --bg:             #F6F8FB;
@@ -107,9 +158,9 @@
   --bg-subtle:      #EDF1F6;
   --stone:          #E2E8F0;
   
-  --border:         #CCD6E0;
-  --border-mid:     #B4C2D0;
-  --border-light:   #E6ECF2;
+  --border:         #D2DDE8;
+  --border-mid:     #B8C8D8;
+  --border-light:   #E8EEF5;
   
   --ink:            #0A131F;
   --ink-2:          #233346;
@@ -138,52 +189,308 @@
 [data-theme="terra"] {
   --theme-name: "Raw Grain Terra & Jute Hearth";
 
-  /* Primary Deep Spectrum — Roasted Grain Espresso & Dark Umber */
-  --green-deep:     #140E0A;
-  --green:          #201712;
-  --green-mid:      #32251D;
-  --green-surface:  #443228;
-  --green-subtle:   #F7EFEB;
+  /* Primary Deep Spectrum — Rich Roasted Cacao & Roasted Grain Espresso */
+  --green-deep:     #120904;
+  --green:          #1F120A;
+  --green-mid:      #2E1C12;
+  --green-surface:  #422A1C;
+  --green-subtle:   #FBF3EC;
   
-  /* Accent Spectrum — Spiced Terracotta & Raw Copper */
-  --gold:           #B8582B;
-  --gold-light:     #D97343;
-  --gold-hover:     #9C451E;
-  --gold-subtle:    rgba(184, 88, 43, 0.14);
-  --gold-border:    rgba(217, 115, 67, 0.32);
+  /* Accent Spectrum — Fiery Saffron Clay & Flame Amber (High Vibrance) */
+  --gold:           #E05D22;
+  --gold-light:     #F57C36;
+  --gold-hover:     #C24A14;
+  --gold-subtle:    rgba(224, 93, 34, 0.14);
+  --gold-border:    rgba(224, 93, 34, 0.38);
 
-  /* Substrates & Ink — Unbleached Jute Linen */
-  --bg:             #FAF6F2;
+  /* Substrates & Ink — Crisp Chalk Canvas & Obsidian Espresso Ink */
+  --bg:             #FAF7F2;
   --bg-surface:     #FFFFFF;
-  --bg-subtle:      #F2EBE3;
-  --stone:          #E5DCD2;
+  --bg-subtle:      #F4EDE4;
+  --stone:          #EAE0D4;
   
-  --border:         #D4C7BA;
-  --border-mid:     #BCAC9D;
-  --border-light:   #EAE2D8;
+  --border:         #E5DACF;
+  --border-mid:     #D1C2B2;
+  --border-light:   #F0E8DF;
   
-  --ink:            #18110D;
-  --ink-2:          #352820;
-  --ink-3:          #69574D;
-  --ink-4:          #9E8A7E;
+  --ink:            #140B06;
+  --ink-2:          #301E14;
+  --ink-3:          #5E4233;
+  --ink-4:          #947868;
 
-  /* Hero & Industrial Surfaces */
-  --hero-bar-bg:       #140E0A;
-  --hero-body-bg:      #1C130E;
-  --hero-left-bg:      rgba(32, 23, 18, 0.5);
-  --hero-right-bg:     rgba(20, 14, 10, 0.75);
-  --hero-telemetry-bg: rgba(28, 20, 15, 0.85);
-  --hero-border:       rgba(217, 115, 67, 0.28);
-  --accent-gradient:   linear-gradient(135deg, #F29668 0%, #D97343 50%, #F5AA82 100%);
-  --btn-gradient:      linear-gradient(135deg, #E28254 0%, #B8582B 100%);
-  --btn-gradient-hover:linear-gradient(135deg, #EC956A 0%, #C86432 100%);
-  --btn-solid-text:    #140C07;
-  --step-card-hover:   #2C1E17;
+  /* Hero & Industrial Surfaces — Hearth Kiln & Roasted Bran */
+  --hero-bar-bg:       #120904;
+  --hero-body-bg:      #1A0F08;
+  --hero-left-bg:      rgba(31, 18, 10, 0.55);
+  --hero-right-bg:     rgba(18, 9, 4, 0.8);
+  --hero-telemetry-bg: rgba(26, 15, 8, 0.88);
+  --hero-border:       rgba(224, 93, 34, 0.35);
+  --accent-gradient:   linear-gradient(135deg, #F9955A 0%, #E05D22 50%, #F57C36 100%);
+  --btn-gradient:      linear-gradient(135deg, #FA8C48 0%, #D64E18 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #FCA166 0%, #B83E0F 100%);
+  --btn-solid-text:    #120904;
+  --step-card-hover:   #2C170B;
   
   /* Navbar Dynamic Surfaces */
-  --nav-bg-top:        rgba(250, 246, 242, 0.90);
-  --nav-bg-scrolled:   rgba(20, 14, 10, 0.96);
-  --nav-border-scrolled: rgba(217, 115, 67, 0.24);
+  --nav-bg-top:        rgba(250, 247, 242, 0.90);
+  --nav-bg-scrolled:   rgba(18, 9, 4, 0.96);
+  --nav-border-scrolled: rgba(224, 93, 34, 0.28);
+}
+
+[data-theme="distillery"] {
+  --theme-name: "Golden DDGS & Distillery Copper";
+
+  /* Primary Deep Spectrum — Deep Malting Vat Bronze & Forest Moss Green */
+  --green-deep:     #121910;
+  --green:          #1A2417;
+  --green-mid:      #2A3826;
+  --green-surface:  #3C4E37;
+  --green-subtle:   #F3F7F1;
+
+  /* Accent Spectrum — Burnished Copper & Toasted Corn DDGS Flake Gold */
+  --gold:           #C86222;
+  --gold-light:     #F5C258;
+  --gold-hover:     #AC5016;
+  --gold-subtle:    rgba(245, 194, 88, 0.14);
+  --gold-border:    rgba(200, 98, 34, 0.36);
+
+  /* Substrates & Ink — Malt Flour Parchment & Dark Botanical Ink */
+  --bg:             #FAF6EE;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #F2EDE2;
+  --stone:          #E6DFD1;
+
+  --border:         #E2DACB;
+  --border-mid:     #CFC5B2;
+  --border-light:   #EEE7DA;
+
+  --ink:            #131A10;
+  --ink-2:          #323D2D;
+  --ink-3:          #5F6D5A;
+  --ink-4:          #92A08D;
+
+  /* Hero & Industrial Surfaces — Distillery Column & Biofuel Silo */
+  --hero-bar-bg:       #121910;
+  --hero-body-bg:      #182215;
+  --hero-left-bg:      rgba(26, 36, 23, 0.55);
+  --hero-right-bg:     rgba(18, 25, 16, 0.8);
+  --hero-telemetry-bg: rgba(24, 34, 21, 0.88);
+  --hero-border:       rgba(245, 194, 88, 0.32);
+  --accent-gradient:   linear-gradient(135deg, #F7CF76 0%, #C86222 50%, #F5C258 100%);
+  --btn-gradient:      linear-gradient(135deg, #F5C258 0%, #C86222 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #FAD47A 0%, #DE7534 100%);
+  --btn-solid-text:    #0F160E;
+  --step-card-hover:   #263422;
+
+  /* Navbar Dynamic Surfaces */
+  --nav-bg-top:        rgba(250, 246, 238, 0.90);
+  --nav-bg-scrolled:   rgba(18, 25, 16, 0.96);
+  --nav-border-scrolled: rgba(200, 98, 34, 0.26);
+}
+
+[data-theme="paddy"] {
+  --theme-name: "Emerald Paddy & Celadon Sprout";
+
+  /* Primary Deep Spectrum — Deep Alpine Spruce & Deep Jade Green */
+  --green-deep:     #081C17;
+  --green:          #0C2B24;
+  --green-mid:      #164238;
+  --green-surface:  #22584C;
+  --green-subtle:   #EEF7F4;
+
+  /* Accent Spectrum — Crisp Celadon Sprout & Radiant Straw Wheat Gold */
+  --gold:           #1E8262;
+  --gold-light:     #F2C450;
+  --gold-hover:     #166B50;
+  --gold-subtle:    rgba(242, 196, 80, 0.14);
+  --gold-border:    rgba(30, 130, 98, 0.38);
+
+  /* Substrates & Ink — Assay Certificate Chalk Jade & Clinical Spruce Ink */
+  --bg:             #F4F8F6;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #ECF2EF;
+  --stone:          #DFE8E4;
+
+  --border:         #D7E3DE;
+  --border-mid:     #BFD0CA;
+  --border-light:   #E5EFEA;
+
+  --ink:            #0A1F1A;
+  --ink-2:          #243F37;
+  --ink-3:          #527068;
+  --ink-4:          #85A199;
+
+  /* Hero & Industrial Surfaces — Grain Field Moisture & Laboratory Assay */
+  --hero-bar-bg:       #081C17;
+  --hero-body-bg:      #0A241E;
+  --hero-left-bg:      rgba(12, 43, 36, 0.55);
+  --hero-right-bg:     rgba(8, 28, 23, 0.8);
+  --hero-telemetry-bg: rgba(10, 36, 30, 0.88);
+  --hero-border:       rgba(242, 196, 80, 0.30);
+  --accent-gradient:   linear-gradient(135deg, #F5D374 0%, #1E8262 50%, #F2C450 100%);
+  --btn-gradient:      linear-gradient(135deg, #F2C450 0%, #1E8262 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #FAD66E 0%, #269873 100%);
+  --btn-solid-text:    #061814;
+  --step-card-hover:   #143B32;
+
+  /* Navbar Dynamic Surfaces */
+  --nav-bg-top:        rgba(244, 248, 246, 0.90);
+  --nav-bg-scrolled:   rgba(8, 28, 23, 0.96);
+  --nav-border-scrolled: rgba(30, 130, 98, 0.26);
+}
+
+[data-theme="crest"] {
+  --theme-name: "Hansha Crest & Solar Sheaf";
+
+  /* Primary Deep Spectrum — Midnight Velvet Green (Sampled directly from Logo base) */
+  --green-deep:     #031407;
+  --green:          #08200E;
+  --green-mid:      #123D1C;
+  --green-surface:  #1B5428;
+  --green-subtle:   #EFF7EF;
+
+  /* Accent Spectrum — Logo Meadow Green & Radiant Solar Wheat Gold */
+  --gold:           #15803D;
+  --gold-light:     #FCD34D;
+  --gold-hover:     #166534;
+  --gold-subtle:    rgba(252, 211, 77, 0.16);
+  --gold-border:    rgba(252, 211, 77, 0.42);
+
+  /* Substrates & Ink — Crest Ivory Canvas & Deep Velvet Botanical Ink */
+  --bg:             #F8FBF7;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #EFF6EE;
+  --stone:          #E2EDE0;
+
+  --border:         #D4E4D2;
+  --border-mid:     #BCCFBA;
+  --border-light:   #E4EFE2;
+
+  --ink:            #081C0E;
+  --ink-2:          #1E3A24;
+  --ink-3:          #4B6B52;
+  --ink-4:          #7F9E86;
+
+  /* Hero & Industrial Surfaces — Brand Crest Shield & Golden Sheaf */
+  --hero-bar-bg:       #031407;
+  --hero-body-bg:      #071E0C;
+  --hero-left-bg:      rgba(8, 32, 14, 0.55);
+  --hero-right-bg:     rgba(3, 20, 7, 0.8);
+  --hero-telemetry-bg: rgba(7, 30, 12, 0.88);
+  --hero-border:       rgba(252, 211, 77, 0.35);
+  --accent-gradient:   linear-gradient(135deg, #FDE68A 0%, #22C55E 50%, #FCD34D 100%);
+  --btn-gradient:      linear-gradient(135deg, #FCD34D 0%, #D97706 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #FDE68A 0%, #B45309 100%);
+  --btn-solid-text:    #041508;
+  --step-card-hover:   #12381B;
+
+  /* Navbar Dynamic Surfaces */
+  --nav-bg-top:        rgba(248, 251, 247, 0.90);
+  --nav-bg-scrolled:   rgba(4, 20, 8, 0.96);
+  --nav-border-scrolled: rgba(252, 211, 77, 0.30);
+}
+
+[data-theme="bran"] {
+  --theme-name: "Toasted Bran & Golden Jute";
+
+  /* Primary Deep Spectrum — Rich Roasted Walnut & Deep Toasted Bran Brown */
+  --green-deep:     #140F0B;
+  --green:          #221A14;
+  --green-mid:      #362B22;
+  --green-surface:  #4C3E33;
+  --green-subtle:   #F7F2EB;
+
+  /* Accent Spectrum — Rich Toasted Bran Tan & Golden Hessian (Zero Red/Copper) */
+  --gold:           #A87432;
+  --gold-light:     #C9944D;
+  --gold-hover:     #8F5E24;
+  --gold-subtle:    rgba(168, 116, 50, 0.14);
+  --gold-border:    rgba(168, 116, 50, 0.38);
+
+  /* Substrates & Ink — Natural Hessian Flax & Deep Roasted Espresso Ink */
+  --bg:             #FAF6F0;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #F2EAE0;
+  --stone:          #E5DCD0;
+
+  --border:         #E0D4C5;
+  --border-mid:     #C9BBAA;
+  --border-light:   #EFE7DC;
+
+  --ink:            #1A130E;
+  --ink-2:          #382A20;
+  --ink-3:          #665345;
+  --ink-4:          #9A8574;
+
+  /* Hero & Industrial Surfaces — Rice Bran Mill & DORB Bagging */
+  --hero-bar-bg:       #140F0B;
+  --hero-body-bg:      #1D1611;
+  --hero-left-bg:      rgba(34, 26, 20, 0.55);
+  --hero-right-bg:     rgba(20, 15, 11, 0.8);
+  --hero-telemetry-bg: rgba(28, 22, 17, 0.88);
+  --hero-border:       rgba(201, 148, 77, 0.32);
+  --accent-gradient:   linear-gradient(135deg, #E8C182 0%, #A87432 50%, #C9944D 100%);
+  --btn-gradient:      linear-gradient(135deg, #D4A35C 0%, #A87432 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #E0B472 0%, #946326 100%);
+  --btn-solid-text:    #120C08;
+  --step-card-hover:   #2E231B;
+
+  /* Navbar Dynamic Surfaces */
+  --nav-bg-top:        rgba(250, 246, 240, 0.90);
+  --nav-bg-scrolled:   rgba(20, 15, 11, 0.96);
+  --nav-border-scrolled: rgba(168, 116, 50, 0.26);
+}
+
+[data-theme="granary"] {
+  --theme-name: "Granary Earth & Golden Malt";
+
+  /* Primary Deep Spectrum — Earthy Moss Green & Roasted Walnut Peat */
+  --green-deep:     #11140E;
+  --green:          #1C2016;
+  --green-mid:      #2E3624;
+  --green-surface:  #424A35;
+  --green-subtle:   #F3F5EE;
+
+  /* Accent Spectrum — Golden Malt & Toasted Amber Gold */
+  --gold:           #B88828;
+  --gold-light:     #E5B842;
+  --gold-hover:     #9C6E1A;
+  --gold-subtle:    rgba(184, 136, 40, 0.14);
+  --gold-border:    rgba(229, 184, 66, 0.38);
+
+  /* Substrates & Ink — Clean Malt Parchment & High-Contrast Readability */
+  --bg:             #F8F6F0;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #EFECE2;
+  --stone:          #E2DEC6;
+
+  --border:         #D6D0BD;
+  --border-mid:     #BEB7A1;
+  --border-light:   #EAE5D5;
+
+  /* High Readability Ink Hierarchy (WCAG AAA compliant) */
+  --ink:            #11140D;  /* Deepest pitch peat-carbon — max readability */
+  --ink-2:          #242B1D;  /* Rich dark olive-carbon for headings and bold text */
+  --ink-3:          #3F4835;  /* Darkened from #5C644E -> 7:1 contrast for clear body/subtext */
+  --ink-4:          #5E6952;  /* Darkened from #8C967B -> 4.8:1 contrast for tags/captions */
+
+  /* Hero & Industrial Surfaces — Malting Granary & Feed Processing */
+  --hero-bar-bg:       #11140E;
+  --hero-body-bg:      #171B13;
+  --hero-left-bg:      rgba(28, 32, 22, 0.65);
+  --hero-right-bg:     rgba(17, 20, 14, 0.88);
+  --hero-telemetry-bg: rgba(24, 28, 19, 0.92);
+  --hero-border:       rgba(229, 184, 66, 0.38);
+  --accent-gradient:   linear-gradient(135deg, #E5B842 0%, #B88828 50%, #8A6820 100%);
+  --btn-gradient:      linear-gradient(135deg, #E5B842 0%, #B88828 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #F0C85A 0%, #A0741E 100%);
+  --btn-solid-text:    #11140D;
+  --step-card-hover:   #262B1D;
+
+  /* Navbar Dynamic Surfaces */
+  --nav-bg-top:        rgba(248, 246, 240, 0.92);
+  --nav-bg-scrolled:   rgba(17, 20, 14, 0.97);
+  --nav-border-scrolled: rgba(229, 184, 66, 0.28);
 }
 
 /* ════ Global Reset & Base ════ */
@@ -229,7 +536,7 @@ html.lenis body {
 
 body {
   font-family: var(--f-body);
-  background-color: #FAF8F4;
+  background-color: var(--bg);
   color: var(--ink);
   font-size: 15px;
   line-height: 1.6;
@@ -248,9 +555,9 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background-image: 
-    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(212, 169, 78, 0.09), transparent 65%),
-    radial-gradient(circle at 95% 35%, rgba(15, 37, 25, 0.04), transparent 50%),
-    radial-gradient(circle at 5% 70%, rgba(184, 135, 42, 0.05), transparent 50%);
+    radial-gradient(ellipse 90% 50% at 50% -10%, var(--gold-subtle), transparent 65%),
+    radial-gradient(circle at 95% 35%, var(--green-subtle), transparent 50%),
+    radial-gradient(circle at 5% 70%, var(--gold-subtle), transparent 50%);
   transform: translateZ(0);
   will-change: transform;
 }
@@ -280,9 +587,9 @@ button {
 
 h1, h2, h3, h4, h5 {
   font-family: var(--f-display);
-  font-weight: 400;
+  font-weight: 600;
   color: var(--ink);
-  line-height: 1.1;
+  line-height: 1.15;
   text-wrap: balance;
 }
 
@@ -539,7 +846,7 @@ header.header-root.scrolled {
 }
 
 .scrolled .nav-links a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 .scrolled .nav-links a:hover {
   color: #FFF;
@@ -875,7 +1182,7 @@ header.header-root.drawer-open .burger span {
 
 .hero-paragraph {
   font-size: 0.98rem;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.7;
   max-width: 46ch;
   margin-bottom: 28px;
@@ -1039,7 +1346,7 @@ header.header-root.drawer-open .burger span {
 }
 .telemetry-cell-sub {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.78);
   margin-top: 3px;
   line-height: 1.3;
 }
@@ -1125,7 +1432,7 @@ header.header-root.drawer-open .burger span {
 }
 
 .about-left p {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.88);
   font-size: 0.92rem;
   line-height: 1.65;
 }
@@ -1493,7 +1800,7 @@ header.header-root.drawer-open .burger span {
 
 .step-desc {
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.55;
   transition: color 0.2s ease;
 }
@@ -2249,7 +2556,7 @@ footer {
 .foot-brand p {
   font-family: var(--f-body);
   font-size: 0.84rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.6;
   max-width: 22rem;
 }
@@ -2267,7 +2574,7 @@ footer {
   display: block;
   font-family: var(--f-body);
   font-size: 0.84rem;
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.82);
   padding: 0.22rem 0;
   transition: color 0.18s;
   line-height: 1.5;
@@ -2285,13 +2592,13 @@ footer {
   font-size: 9.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 3px;
 }
 .reg-v {
   font-family: var(--f-body);
   font-size: 0.84rem;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.45;
 }
 .mono-sm {
@@ -2313,7 +2620,7 @@ footer {
   font-size: 9px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .foot-bottom-center {
@@ -3045,8 +3352,8 @@ footer,
 }
 
 .theme-dot {
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
@@ -3054,8 +3361,8 @@ footer,
 }
 
 .theme-opt-btn.active .theme-dot {
-  transform: scale(1.15);
-  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.7);
+  transform: scale(1.18);
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.85);
 }
 
 .theme-dot-heritage {
@@ -3063,30 +3370,64 @@ footer,
 }
 
 .theme-dot-maritime {
-  background: linear-gradient(135deg, #0B1E32 50%, #E0923E 50%);
+  background: linear-gradient(135deg, #0B1E32 50%, #D9771E 50%);
 }
 
 .theme-dot-terra {
-  background: linear-gradient(135deg, #201712 50%, #D97343 50%);
+  background: linear-gradient(135deg, #1F120A 50%, #E05D22 50%);
 }
 
-@media (max-width: 640px) {
+.theme-dot-distillery {
+  background: linear-gradient(135deg, #1A2417 33%, #C86222 33% 66%, #F5C258 66%);
+}
+
+.theme-dot-paddy {
+  background: linear-gradient(135deg, #0C2B24 33%, #1E8262 33% 66%, #F2C450 66%);
+}
+
+.theme-dot-crest {
+  background: linear-gradient(135deg, #08200E 33%, #15803D 33% 66%, #FCD34D 66%);
+}
+
+.theme-dot-bran {
+  background: linear-gradient(135deg, #221A14 50%, #C9944D 50%);
+}
+
+.theme-dot-granary {
+  background: linear-gradient(135deg, #1C2016 33%, #221A14 33% 66%, #E5B842 66%);
+}
+
+@media (max-width: 900px) {
   .theme-switcher-pill {
     bottom: 14px;
-    left: 56px;
-    padding: 3px 4px;
+    left: 60px;
+    padding: 3px 5px;
     gap: 2px;
   }
   .theme-opt-btn {
-    padding: 5px 8px;
-    font-size: 9.5px;
-    gap: 5px;
+    padding: 4px 7px;
+    font-size: 9px;
+    gap: 4px;
   }
   .theme-label {
     display: none;
   }
   .theme-opt-btn.active .theme-label {
     display: inline;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-switcher-pill {
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 24px);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .theme-switcher-pill::-webkit-scrollbar {
+    display: none;
   }
 }
 

@@ -31,7 +31,8 @@ export default function Home() {
       </main>
       <Footer />
       <ScrollToTop />
-      <ThemeSwitcher />
+      {/* ThemeSwitcher disabled from frontend for now */}
+      {/* <ThemeSwitcher /> */}
     </>
   );
 }
