@@ -9,6 +9,7 @@ import Logistics from "@/components/Logistics";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import RevealObserver from "@/components/RevealObserver";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -30,6 +31,7 @@ export default function Home() {
       </main>
       <Footer />
       <ScrollToTop />
+      <ThemeSwitcher />
     </>
   );
 }

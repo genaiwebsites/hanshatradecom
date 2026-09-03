@@ -450,12 +450,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${syne.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap"
+        />
+        <script
+          id="theme-initializer"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('hansha-theme');if(t==='maritime'||t==='terra'||t==='heritage'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`,
+          }}
         />
         <script
           type="application/ld+json"

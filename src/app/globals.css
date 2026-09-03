@@ -5,8 +5,11 @@
    Kolkata Agri-Commodity House · High Craft & Non-AI-Slop Architecture
 ───────────────────────────────────────────────────────────────────────────── */
 
-/* ════ Design Tokens ════ */
-:root {
+/* ════ Design Tokens & Themes ════ */
+:root,
+[data-theme="heritage"] {
+  --theme-name: "Hooghly Heritage";
+
   /* Colors — Kolkata Deep Forest Green & Antique Milled Brass */
   --green-deep:     #08150E;
   --green:          #0F2519;
@@ -35,6 +38,19 @@
   --ink-3:          #55635C;
   --ink-4:          #8F9E97;
 
+  /* Hero & Industrial Surfaces */
+  --hero-bar-bg:       #08170E;
+  --hero-body-bg:      #0A1E13;
+  --hero-left-bg:      rgba(11, 28, 19, 0.45);
+  --hero-right-bg:     rgba(6, 17, 11, 0.7);
+  --hero-telemetry-bg: rgba(10, 26, 17, 0.8);
+  --hero-border:       rgba(212, 169, 78, 0.25);
+  --accent-gradient:   linear-gradient(135deg, #F5D580 0%, #D4A94E 50%, #E6BE68 100%);
+  --btn-gradient:      linear-gradient(135deg, #E6BE68 0%, #B8872A 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #F0CF82 0%, #C49735 100%);
+  --btn-solid-text:    #07150E;
+  --step-card-hover:   #143323;
+
   /* Typography — Modern Swiss Heavy Industrial */
   --f-display: var(--font-syne), "Syne", "Cabinet Grotesk", sans-serif;
   --f-body:    'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -61,6 +77,98 @@
   --z-sticky:   200;
   --z-modal:    300;
   --z-toast:    400;
+}
+
+[data-theme="maritime"] {
+  --theme-name: "Maritime Port & Riverfront Cobalt";
+
+  /* Primary Deep Spectrum — Ocean Trench & Midnight Port */
+  --green-deep:     #06121E;
+  --green:          #0B1E32;
+  --green-mid:      #132F4C;
+  --green-surface:  #1C3F66;
+  --green-subtle:   #EBF2F9;
+  
+  /* Accent Spectrum — Navigational Beacon Amber & Harbor Gold */
+  --gold:           #C2782A;
+  --gold-light:     #E0923E;
+  --gold-hover:     #A8631E;
+  --gold-subtle:    rgba(194, 120, 42, 0.14);
+  --gold-border:    rgba(224, 146, 62, 0.32);
+
+  /* Substrates & Ink — Cool Harbor Mist */
+  --bg:             #F6F8FB;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #EDF1F6;
+  --stone:          #E2E8F0;
+  
+  --border:         #CCD6E0;
+  --border-mid:     #B4C2D0;
+  --border-light:   #E6ECF2;
+  
+  --ink:            #0A131F;
+  --ink-2:          #233346;
+  --ink-3:          #52667A;
+  --ink-4:          #889BB0;
+
+  /* Hero & Industrial Surfaces */
+  --hero-bar-bg:       #06121E;
+  --hero-body-bg:      #09182A;
+  --hero-left-bg:      rgba(11, 30, 50, 0.5);
+  --hero-right-bg:     rgba(6, 18, 30, 0.75);
+  --hero-telemetry-bg: rgba(10, 28, 48, 0.85);
+  --hero-border:       rgba(224, 146, 62, 0.28);
+  --accent-gradient:   linear-gradient(135deg, #F3BA6A 0%, #E0923E 50%, #F5C77E 100%);
+  --btn-gradient:      linear-gradient(135deg, #F0A54E 0%, #C2782A 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #F8B768 0%, #D48430 100%);
+  --btn-solid-text:    #05101A;
+  --step-card-hover:   #122942;
+}
+
+[data-theme="terra"] {
+  --theme-name: "Raw Grain Terra & Jute Hearth";
+
+  /* Primary Deep Spectrum — Roasted Grain Espresso & Dark Umber */
+  --green-deep:     #140E0A;
+  --green:          #201712;
+  --green-mid:      #32251D;
+  --green-surface:  #443228;
+  --green-subtle:   #F7EFEB;
+  
+  /* Accent Spectrum — Spiced Terracotta & Raw Copper */
+  --gold:           #B8582B;
+  --gold-light:     #D97343;
+  --gold-hover:     #9C451E;
+  --gold-subtle:    rgba(184, 88, 43, 0.14);
+  --gold-border:    rgba(217, 115, 67, 0.32);
+
+  /* Substrates & Ink — Unbleached Jute Linen */
+  --bg:             #FAF6F2;
+  --bg-surface:     #FFFFFF;
+  --bg-subtle:      #F2EBE3;
+  --stone:          #E5DCD2;
+  
+  --border:         #D4C7BA;
+  --border-mid:     #BCAC9D;
+  --border-light:   #EAE2D8;
+  
+  --ink:            #18110D;
+  --ink-2:          #352820;
+  --ink-3:          #69574D;
+  --ink-4:          #9E8A7E;
+
+  /* Hero & Industrial Surfaces */
+  --hero-bar-bg:       #140E0A;
+  --hero-body-bg:      #1C130E;
+  --hero-left-bg:      rgba(32, 23, 18, 0.5);
+  --hero-right-bg:     rgba(20, 14, 10, 0.75);
+  --hero-telemetry-bg: rgba(28, 20, 15, 0.85);
+  --hero-border:       rgba(217, 115, 67, 0.28);
+  --accent-gradient:   linear-gradient(135deg, #F29668 0%, #D97343 50%, #F5AA82 100%);
+  --btn-gradient:      linear-gradient(135deg, #E28254 0%, #B8582B 100%);
+  --btn-gradient-hover:linear-gradient(135deg, #EC956A 0%, #C86432 100%);
+  --btn-solid-text:    #140C07;
+  --step-card-hover:   #2C1E17;
 }
 
 /* ════ Global Reset & Base ════ */
@@ -680,8 +788,8 @@ header.header-root.drawer-open .burger span {
   justify-content: space-between;
   align-items: center;
   padding: 11px 24px;
-  background: #08170E;
-  border: 1px solid rgba(212, 169, 78, 0.25);
+  background: var(--hero-bar-bg);
+  border: 1px solid var(--hero-border);
   border-bottom: none;
   border-radius: 4px 4px 0 0;
   font-family: var(--f-mono);
@@ -720,9 +828,9 @@ header.header-root.drawer-open .burger span {
 .hero-body-grid {
   display: grid;
   grid-template-columns: 1.18fr 0.82fr;
-  border: 1px solid rgba(212, 169, 78, 0.25);
-  background: #0A1E13;
-  box-shadow: 0 20px 45px rgba(15, 37, 25, 0.15);
+  border: 1px solid var(--hero-border);
+  background: var(--hero-body-bg);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
 }
 
 .hero-left-content {
@@ -731,7 +839,7 @@ header.header-root.drawer-open .burger span {
   flex-direction: column;
   justify-content: space-between;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(11, 28, 19, 0.45);
+  background: var(--hero-left-bg);
 }
 
 .hero-headline {
@@ -746,7 +854,7 @@ header.header-root.drawer-open .burger span {
 .hero-headline em,
 .hero-gold-accent {
   font-style: normal;
-  background: linear-gradient(135deg, #F5D580 0%, #D4A94E 50%, #E6BE68 100%);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -768,17 +876,17 @@ header.header-root.drawer-open .burger span {
 }
 
 .hero-action-group .btn-solid {
-  background: linear-gradient(135deg, #E6BE68 0%, #B8872A 100%);
-  color: #07150E;
+  background: var(--btn-gradient);
+  color: var(--btn-solid-text);
   font-weight: 700;
   border: none;
-  box-shadow: 0 4px 20px rgba(212, 169, 78, 0.35);
+  box-shadow: 0 4px 20px var(--gold-subtle);
   transition: all 0.22s ease;
 }
 .hero-action-group .btn-solid:hover {
-  background: linear-gradient(135deg, #F0CF82 0%, #C49735 100%);
+  background: var(--btn-gradient-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(212, 169, 78, 0.5);
+  box-shadow: 0 8px 28px var(--gold-subtle);
 }
 
 .hero-action-group .btn-outline {
@@ -827,7 +935,7 @@ header.header-root.drawer-open .burger span {
 }
 .commodity-pill:hover {
   background: var(--gold);
-  color: #07150E;
+  color: var(--btn-solid-text);
   font-weight: 600;
   border-color: var(--gold-light);
   transform: translateY(-1px);
@@ -837,7 +945,7 @@ header.header-root.drawer-open .burger span {
 .hero-right-sidebar {
   display: flex;
   flex-direction: column;
-  background: rgba(6, 17, 11, 0.7);
+  background: var(--hero-right-bg);
 }
 
 .hero-warehouse-card {
@@ -869,7 +977,7 @@ header.header-root.drawer-open .burger span {
 }
 
 .hero-telemetry-cell {
-  background: rgba(10, 26, 17, 0.8);
+  background: var(--hero-telemetry-bg);
   padding: 18px 22px;
   display: flex;
   flex-direction: column;
@@ -884,7 +992,7 @@ header.header-root.drawer-open .burger span {
   font-family: inherit;
 }
 .hero-telemetry-btn:hover {
-  background: rgba(212, 169, 78, 0.15);
+  background: var(--gold-subtle);
 }
 
 .telemetry-cell-head {
@@ -938,8 +1046,8 @@ header.header-root.drawer-open .burger span {
   align-items: center;
   justify-content: space-between;
   padding: 12px 24px;
-  background: #07150E;
-  border: 1px solid rgba(212, 169, 78, 0.25);
+  background: var(--hero-bar-bg);
+  border: 1px solid var(--hero-border);
   border-top: none;
   border-radius: 0 0 4px 4px;
   font-family: var(--f-mono);
@@ -1310,7 +1418,7 @@ header.header-root.drawer-open .burger span {
   cursor: default;
 }
 .step-card:hover {
-  background: #143323;
+  background: var(--step-card-hover);
 }
 
 .step-icon-wrap {
@@ -1759,7 +1867,7 @@ header.header-root.drawer-open .burger span {
   bottom: var(--sp-3);
   left: var(--sp-3);
   right: var(--sp-3);
-  background: rgba(8, 21, 14, 0.88);
+  background: var(--hero-telemetry-bg);
   padding: 8px 12px;
   border-radius: 2px;
   border-left: 2px solid var(--gold);
@@ -2833,6 +2941,138 @@ footer {
     right: 14px;
     width: 36px;
     height: 36px;
+  }
+}
+
+/* ════════════════════════════════════════════
+   SMOOTH THEME TRANSITION
+════════════════════════════════════════════ */
+html,
+body,
+header,
+.hero-provenance-bar,
+.hero-body-grid,
+.hero-left-content,
+.hero-right-sidebar,
+.hero-telemetry-cell,
+.hero-corridor-strip,
+.step-card,
+.desk,
+footer,
+.prod-card,
+.quality-media,
+.logi-media,
+.logi-card,
+.about-card,
+.leader-card,
+.spec-card,
+.spec-table,
+.theme-switcher-pill {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.25s ease, box-shadow 0.3s ease;
+}
+
+/* ════════════════════════════════════════════
+   SUBTLE FLOATING THEME SWITCHER
+   Bottom-Left Pill Control
+════════════════════════════════════════════ */
+.theme-switcher-pill {
+  position: fixed;
+  bottom: 20px;
+  left: 68px;
+  z-index: var(--z-toast);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.06);
+  user-select: none;
+}
+
+.theme-switcher-pill:hover {
+  background: #FFFFFF;
+  border-color: var(--border-mid);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16);
+}
+
+.theme-opt-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink-3);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.theme-opt-btn:hover {
+  color: var(--ink);
+  background: var(--bg-subtle);
+}
+
+.theme-opt-btn.active {
+  background: var(--green);
+  color: #FFF;
+  border-color: var(--green-mid);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  font-weight: 600;
+}
+
+.theme-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.theme-opt-btn.active .theme-dot {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.7);
+}
+
+.theme-dot-heritage {
+  background: linear-gradient(135deg, #0F2519 50%, #D4A94E 50%);
+}
+
+.theme-dot-maritime {
+  background: linear-gradient(135deg, #0B1E32 50%, #E0923E 50%);
+}
+
+.theme-dot-terra {
+  background: linear-gradient(135deg, #201712 50%, #D97343 50%);
+}
+
+@media (max-width: 640px) {
+  .theme-switcher-pill {
+    bottom: 14px;
+    left: 56px;
+    padding: 3px 4px;
+    gap: 2px;
+  }
+  .theme-opt-btn {
+    padding: 5px 8px;
+    font-size: 9.5px;
+    gap: 5px;
+  }
+  .theme-label {
+    display: none;
+  }
+  .theme-opt-btn.active .theme-label {
+    display: inline;
   }
 }
 
