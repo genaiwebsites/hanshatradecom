@@ -20,13 +20,11 @@ export default function Hero() {
         <div className="hero-provenance-bar">
           <div className="hero-provenance-left">
             <span className="live-pulse-dot" />
-            <span className="provenance-title">Kolkata Operations Active</span>
-            <span className="provenance-sep">·</span>
-            <span className="provenance-meta">Private Limited Company · Incorporated 2003</span>
+            <span>Rake &amp; Truckload Dispatches</span>
           </div>
           <div className="hero-provenance-right">
             <ShieldCheck size={12} className="text-[var(--gold)]" />
-            <span>Spot & Forward Contract Desk</span>
+            <span>Mill-Direct Sourcing</span>
           </div>
         </div>
 

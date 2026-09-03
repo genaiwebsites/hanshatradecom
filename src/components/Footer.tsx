@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           {/* Registry & Statutory */}
-          <div className="foot-col">
+          <div className="foot-col foot-col-registry">
             <h5>Corporate Registry</h5>
             <div className="foot-registry-item">
               <span className="reg-k">CIN</span>
@@ -91,8 +91,8 @@ export default function Footer() {
             <div className="foot-registry-item">
               <span className="reg-k">Registered Office</span>
               <span className="reg-v">
-                55/1A Strand Road, 2nd Floor, RNO-204,<br />
-                Kolkata 700006
+                55/1A Strand Road, 2nd Floor<br />
+                RNO-204, Kolkata 700006
               </span>
             </div>
           </div>
